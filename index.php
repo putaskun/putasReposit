@@ -7,7 +7,7 @@
 	<link href="<?php echo get_stylesheet_uri(); ?>" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		<link href="<?php echo get_template_directory_uri(); ?>/css/slide.css" rel="stylesheet" type="text/css">
-<!--	<link href="<?php echo get_template_directory_uri(); ?>/css/normalize.css" rel="stylesheet" type="text/css">-->
+<link href="<?php echo get_template_directory_uri(); ?>/css/normalize.css" rel="stylesheet" type="text/css">
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css">
 	<?php wp_deregister_script('jquery'); ?>

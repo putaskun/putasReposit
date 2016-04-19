@@ -1,58 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link href="<?php echo get_stylesheet_uri(); ?>" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-		<link href="<?php echo get_template_directory_uri(); ?>/css/slide.css" rel="stylesheet" type="text/css">
-<link href="<?php echo get_template_directory_uri(); ?>/css/normalize.css" rel="stylesheet" type="text/css">
-<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css">
-	<?php wp_deregister_script('jquery'); ?>
-<!-- WordPressのjQueryを読み込ませない -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-
-
-</head>
-<body>
-	<!--<script>$(function() {
-	$('div.coachtext a').balloon();
-});
-</script>-->
-
-<!--<script>$("#getw").click(function () {
-  showHeight("window", $(window).height());
-});
-</script>-->
-
-
-<script>
-  $(document).ready(function(){
-    //画面の高さを取得して、変数wHに代入
-    var wH = $(window).height();
-        $("div.wrapper").css("paddingTop", wH );
-  });
-  </script>
-
-
-	<div id="header">
-		<nav>
-			<ul class="clearfix">
-				<li class="menuTitle"><img src="<?php echo get_template_directory_uri(); ?>/images/toplogo.png" alt="starssmileytitleロゴ"></li>
-				<li class="menuAbout">グローバルチアについて</li>
-				<li class="menuClass">クラス紹介</li>
-				<li class="menuCoach"><i class="fa fa-quote-right"></i>コーチ</li>
-				<li class="menuFee">料金</li>
-				<li class="menuVoice">お客様の声</li>
-				<li class="otoiawase">お問い合わせ</li>
-			</ul>
-		</nav>
-
-	</div>
-<!--END#header-->
-
+ <?php get_header(); ?>
 
 
 <!--<ul class="box__area">
@@ -119,11 +65,188 @@
 		</div>
 <!--/about6-->
 
+
+<!--uematsu code-->
+	                    <section id="news">
+                    <header class="secHeader">
+                            <h1><img src="<?php bloginfo('template_url'); ?>/imgs/top_b2_h1.gif" alt="新着ニュース" width="142" height="27"/></h1>
+                        </header>
+            
+                        <div id="newsList" class="linkList">
+                           <ul>
+<?php
+/*----- newsカテゴリ id=3の最新3件を表示 -----*/
+$arrNewsPosts= query_posts( array(
+'post_type'=> 'post',
+'post_status'=> 'publish',
+'showposts'=> 20,
+'category_name'=> 'news',
+'order'=> 'DESC',
+'orderby'=> 'date'
+));
+
+$intMax= count($arrNewsPosts);
+
+$flgLoop= 0;
+$flgLoopMax= 0;
+for( $i=0; $i<$intMax; $i++ ){
+
+$varNewsPost= $arrNewsPosts[$i];
+
+//url
+$strUrl= null;
+if( get_post_meta( $varNewsPost->ID, 'newsUrl', true ) ){
+$strUrl= get_post_meta( $varNewsPost->ID, 'newsUrl', true );
+}
+else {
+$strUrl= get_permalink( $varNewsPost->ID );
+}
+
+//title
+$strTitle= $varNewsPost->post_title;
+
+//date
+$strDate= get_the_time( 'Y.m.d' , $varNewsPost->ID );
+
+if( $strUrl && $strTitle && $strDate ){
+echo '<li class="listItem">' . "\n";
+echo '<div class="listItemInner">' . "\n";
+echo '<aside class="itemData">' . "\n";
+echo '<time pubdate="pubdate">' . $strDate . '</time>' . "\n";
+echo '</aside>' . "\n";
+echo '<a href="' . $strUrl . '">' . $strTitle . '</a>' . "\n";
+echo '</div>' . "\n";
+echo '</li>' . "\n";
+
+$flgLoop++;
+if( $flgLoop > $flgLoopMax ){
+break;
+}
+}
+}
+?>
+                            </ul>
+</div>
+                    </section>
+                    
+                </div>
+                
+                
+                <div class="column2 clearfix">
+            
+                    <div id="grid">
+
+<?php
+$cat_list = array();
+foreach((get_the_category()) as $cat) {
+if( $cat->cat_ID != 3 ){
+$cat_list[] = $cat->cat_ID ;
+}
+}
+
+$flg = false;
+
+$query=array();
+$query[] = sprintf('cat=%s', implode(',', $cat_list));
+$query[] = sprintf('showposts=%d', 16);
+$query[] = sprintf('meta_key=%s', 'powerpush');
+$query[] = sprintf('meta_value=%s', '1');
+$query[] = sprintf('orderby=%s', 'rand');
+
+
+query_posts(implode('&', $query));
+?>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+<?php if ( !$flg ) {
+$video = get_post_meta($post->ID,'works_video',true);
+$flg = true;
+if( $video ) {
+?>
+<div class="item big" ><?php echo $video; ?></div>
+<?php } else { ?>
+<div class="item big" ><?php the_post_thumbnail(array(380,285)); ?></div>
+<?php } } ?>
+
+<?php if ( has_post_thumbnail() ) {?>
+<div class="item" >
+<?php $tnw_imgwidth = get_option('tnw-box-width');?>
+<a href="<?php the_permalink();?>"><?php the_post_thumbnail(array($tnw_imgwidth,$tnw_imgwidth)); ?></a>
+</div>
+<?php } ?>
+
+<?php endwhile; endif; ?>
+<?php wp_reset_query() ?>
+
+
+<!--/uematsu code-->
+
+
+
+<!--TEST-->
+<?php
+query_posts($query_string . "&cat=10&showposts=3");
+ if (have_posts()) :
+  while (have_posts()) : the_post(); ?>
+<dl>
+ <dt class="title"><a href="<?php the_permaLink(); ?>"><?php the_title(); ?></a></dt>
+ <dd class="date"><?php the_time('Y.m.d'); ?>UP</dd>
+ <dd class="text"><?php
+   if ( has_post_thumbnail() ): // サムネイルを持っているときの処理
+    ?><?php the_post_thumbnail( array(150,150), array('class' => 'imgLeft') ); ?><?php
+   else: // サムネイルを持っていないときの処理
+    ?><img src="<?php bloginfo('template_url') ?>/image/no_image.gif" alt="noimage" class="imgLeft" /><?php
+   endif; ?><?php the_excerpt(); ?></dd>
+ </dl><?php
+  endwhile;
+ endif;
+wp_reset_query();
+?>
+<!--/TEST-->
+
+
+<!--TEST2-->
+<?php
+
+// クエリ
+$query1 = new WP_Query( $args );
+
+// ループ
+while ( $query1->have_posts() ) {
+	$query1->the_post();
+	echo '<li>' . get_the_title() . '</li>';
+}
+
+/* オリジナルの投稿データを復元
+ * 注意: WP_Query を使っているのでオリジナルの $wp_query を壊すことは
+ * なく、wp_reset_query() によってリセットする必要はありません。
+ * 投稿データを wp_reset_postdata() で復元することだけが必要です。
+ */
+wp_reset_postdata();
+
+
+/* 2つ目のクエリ (グローバル変数を使わない) */
+$query2 = new WP_Query( $args2 );
+
+// 2つ目のループ
+while ( $query2->have_posts() ) {
+	$query2->the_post();
+	echo '<li>' . get_the_title( $query2->post->ID ) . '</li>';
+}
+
+// 元の投稿データを復元
+wp_reset_postdata();
+
+?>
+<!--/TEST2-->
+
+
 <!--class-->
 		<div class="classu">
 			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_pink.png"></p><p class="subtitle">クラスのご紹介<br><span>CLASS</span></p></h2>
 
 			<p>ベビーからキッズまで、月齢にあわせたプログラムで指導していきます！</p>
+
 
 			<ul>
 				<li><p>ベビーダンス<span class="classlogo mama"><img src="<?php echo get_template_directory_uri(); ?>/images/classlogo1.png"></span>首据わり～2歳頃までのベビー＆ママ（パパ）</p><p><img src="<?php echo get_template_directory_uri(); ?>/images/classphoto1.png"></p><p>ベビーを抱っこしながらダンスステップを踏むことで、お子様のリズム感を養いながら親子で運動する楽しさをお伝えします。簡単なベビーマッサージや絵本も紹介<br><i class="fa fa-star"></i>単発1,300円</p><p class="moreB">MORE</p></li>
@@ -139,8 +262,86 @@
 				英語を活用したダンス指導のほか、基礎体力・表現・奉仕の精神を柱に、踊っている自分自身も、
 				見ている人も笑顔で元気にするダンスを目指しています！
 			</p>
+			<?php if( in_category( 'クラス紹介' )) : ?>
+			このカテゴリの場合に表示するもの
+			<?php endif; ?>
+
+
+
+<ul>
+			<?php
+		query_posts('showposts=1');
+		if (have_posts()) :
+		while (have_posts()) :
+		the_post();
+		?>
+		<li><a href="<?php the_permalink() ?>"><?php the_title(); ?><?php the_category('') ?></a></li>
+		<?php
+		endwhile;
+		endif;
+		?>
+	</ul>
+
+	<ul>
+				<?php
+			query_posts('showposts=1');
+			if (have_posts()) :
+			while (have_posts()) :
+			the_post();
+			?>
+			<li><a href="<?php the_permalink() ?>"><?php the_title(); ?><?php the_category('') ?></a></li>
+			<?php
+			endwhile;
+			endif;
+			?>
+		</ul>
 		</div>
 <!--/class-->
+
+<?php
+$cat_list = array();
+foreach((get_the_category()) as $cat) {
+if( $cat->cat_ID != 3 ){
+$cat_list[] = $cat->cat_ID ;
+}
+}
+
+$flg = false;
+
+$query=array();
+$query[] = sprintf('cat=%s', implode(',', $cat_list));
+$query[] = sprintf('showposts=%d', 16);
+$query[] = sprintf('meta_key=%s', 'powerpush');
+$query[] = sprintf('meta_value=%s', '1');
+$query[] = sprintf('orderby=%s', 'rand');
+
+
+query_posts(implode('&', $query));
+?>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+<?php if ( !$flg ) {
+$video = get_post_meta($post->ID,'works_video',true);
+$flg = true;
+if( $video ) {
+?>
+<div class="item big" ><?php echo $video; ?></div>
+<?php } else { ?>
+<div class="item big" ><?php the_post_thumbnail(array(380,285)); ?></div>
+<?php } } ?>
+
+<?php if ( has_post_thumbnail() ) {?>
+<div class="item" >
+<?php $tnw_imgwidth = get_option('tnw-box-width');?>
+<a href="<?php the_permalink();?>"><?php the_post_thumbnail(array($tnw_imgwidth,$tnw_imgwidth)); ?></a>
+</div>
+<?php } ?>
+
+<?php endwhile; endif; ?>
+<?php wp_reset_query() ?>
+
+
+
 
 <!--campaign-->
 		<div class="campaign">
@@ -260,13 +461,77 @@
 			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_cream.png"><p>最新情報・会社概要・採用・SNS・プライバシーポリシー<br><span>FAQ</span><p></h2>
 
 
-			<ul>
-				<li><div class="new">NEW</div><div class="Q"><span><img src="<?php echo get_template_directory_uri(); ?>/images/campaign.png"></span></div><div class="Ans">あああああああああああああああああああああああああああああああああああああああああああ</div></li>
-				<li><div class="new">NEW</div><div class="Q"><span><img src="<?php echo get_template_directory_uri(); ?>/images/campaign.png"></span></div><div class="Ans">あああああああああああああああああああああああああああああああああああああああああああ</div></li>
-				<li><div class="new">NEW</div><div class="Q"><span><img src="<?php echo get_template_directory_uri(); ?>/images/campaign.png"></span></div><div class="Ans">あああああああああああああああああああああああああああああああああああああああああああ</div></li>
-			</ul>
 
-			<p class="moreB">MORE</p>
+
+
+		<?php if (have_posts()) : ?>
+			<?php while (have_posts()) : the_post(); ?>
+				<ul class="post clearfix">
+					<li>
+						<span class="title">
+							<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
+								<?php the_title(); ?>
+							</a>
+						</span>
+							<ul class="blog_info clearfix">
+								<li class="cal"><?php the_time('Y年m月d日') ?></li>
+								<li class="cat"><?php the_category('NEWS') ?></li>
+								<li class="tag"><?php the_tags('NEWS', ', '); ?></li>
+							</ul>
+
+					<p><?php if(has_post_thumbnail()) { echo the_post_thumbnail(); } ?></p>
+
+					<span><?php the_content('続きを読む'); ?></span>
+
+		</li>
+			<?php endwhile; ?>
+
+					<div class="nav-below">
+					<span class="nav-previous"><?php next_posts_link('古い記事へ') ?></span>
+					<span class="nav-next"><?php previous_posts_link('新しい記事へ') ?></span>
+				</div><!-- /.nav-below -->
+
+			<?php else : ?>
+
+					<h2 class="title">記事が見つかりませんでした。</h2>
+					<p>検索で見つかるかもしれません。</p><br />
+					<?php get_search_form(); ?>
+			<?php endif; ?>
+
+	</ul>
+
+  <?php
+  $categories = get_categories();
+  foreach($categories as $category) :
+  ?>
+  <div><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->cat_name; ?></a></div>
+  <ul>
+  <?php
+  query_posts('cat='.$category->cat_ID);
+  if (have_posts()) : while (have_posts()) : the_post();
+  ?>
+  <li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+  <?php endwhile; endif; ?>
+  </ul>
+  <?php endforeach; ?>
+
+
+
+  <?php
+  $categories = get_categories('parent=0');
+  foreach($categories as $category) :
+  ?>
+  <div><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->cat_name; ?></a></div>
+  <ul>
+  <?php
+  query_posts('cat='.$category->cat_ID);
+  if (have_posts()) : while (have_posts()) : the_post();
+  ?>
+  <li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+  <?php endwhile; endif; ?>
+  </ul>
+  <?php endforeach; ?>
+
 		</div>
 <!--/NEWS SNS-->
 

@@ -23,14 +23,14 @@ $('div.coachtext a').balloon();
 
 <!--about-->
 		<div class="about">
-			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_green.png"><p>グローバルチアについて<br><span>ABOUT</span><p></h2>
+			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_green.png"></p><p>グローバルチアについて<br><span>ABOUT</span></p></h2>
 			<ul class="clearfix">
 				<li><span class="kiso"><br>基礎体力</span></li>
 				<li><span class="hyogen">2<br>表現力</span></li>
 				<li><span class="houshi">3<br>奉仕の精神</span></li>
 			</ul>
 
-			<p>Starssmileyのチアダンススクールは、世界で通用する力を手に入れるプログラムを用意しています！
+			<p class="descript">Starssmileyのチアダンススクールは、世界で通用する力を手に入れるプログラムを用意しています！
 				英語を活用したダンス指導のほか、基礎体力・表現・奉仕の精神を柱に、踊っている自分自身も、
 				見ている人も笑顔で元気にするダンスを目指しています！
 			</p>
@@ -135,7 +135,7 @@ $('div.coachtext a').balloon();
 <br><i class="fa fa-star"></i><strong>毎年3月頃にレッスン生募集。定員になり次第締め切り。</strong></p><p class="moreB">MORE</p></li>
 			</ul>
 
-			<p>Starssmileyのチアダンススクールは、世界で通用する力を手に入れるプログラムを用意しています！
+			<p class="descript">Starssmileyのチアダンススクールは、世界で通用する力を手に入れるプログラムを用意しています！
 				英語を活用したダンス指導のほか、基礎体力・表現・奉仕の精神を柱に、踊っている自分自身も、
 				見ている人も笑顔で元気にするダンスを目指しています！
 			</p>
@@ -170,7 +170,8 @@ $('div.coachtext a').balloon();
       <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
       <!-- ここに表示するタイトルやコンテンツなどを指定 -->
       <div><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail() ?> </a></div>
-      <p><?php the_content('MORE &raquo;');?></p>
+      <p><?php if(mb_strlen($post->post_content)>50) { $content= mb_substr($post->post_content,0,50) ; echo $content. ･･･ ;
+} else {echo $post->post_content;}?></p>
       <?php endwhile; ?>
       <?php wp_reset_postdata(); ?><!-- 忘れずにリセットする必要がある -->
 </li>
@@ -181,7 +182,7 @@ $('div.coachtext a').balloon();
   </p>
 <!--classTset-->
       <?php
-      $args = array(
+      $prebaby = array(
            'post_type' => 'post', // 投稿タイプを指定
            //'posts_per_page' => 2, // 表示するページ数
           'showposts'=> '1',
@@ -189,11 +190,12 @@ $('div.coachtext a').balloon();
           'showposts'=> 'prebaby',
           'category_name'=> ""
       ); ?>
-      <?php $wp_query = new WP_Query( $args ); ?><!-- クエリの指定 -->
+      <?php $wp_query = new WP_Query( $prebaby ); ?><!-- クエリの指定 -->
       <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
       <!-- ここに表示するタイトルやコンテンツなどを指定 -->
       <div><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail() ?> </a></div>
-      <p><?php the_content('MORE &raquo;');?></p>
+      <p><?php if(mb_strlen($post->post_content)>50) { $content= mb_substr($post->post_content,0,50) ; echo $content. ･･･ ;
+} else {echo $post->post_content;}?></p>
       <?php endwhile; ?>
       <?php wp_reset_postdata(); ?><!-- 忘れずにリセットする必要がある -->
 
@@ -207,18 +209,19 @@ $('div.coachtext a').balloon();
   </p>
 <!--classTset-->
       <?php
-      $args = array(
+      $babycheer = array(
            'post_type' => 'post', // 投稿タイプを指定
            //'posts_per_page' => 2, // 表示するページ数
           'showposts'=> '1',
           'orderby'  => 'date',
           'category_name'=> "babycheer"
       ); ?>
-      <?php $wp_query = new WP_Query( $args ); ?><!-- クエリの指定 -->
+      <?php $wp_query = new WP_Query( $babycheer ); ?><!-- クエリの指定 -->
       <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
       <!-- ここに表示するタイトルやコンテンツなどを指定 -->
       <div><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail() ?> </a></div>
-      <p><?php the_content('MORE &raquo;');?></p>
+      <p><?php if(mb_strlen($post->post_content)>50) { $content= mb_substr($post->post_content,0,50) ; echo $content. ･･･ ;
+} else {echo $post->post_content;}?></p>
       <?php endwhile; ?>
       <?php wp_reset_postdata(); ?><!-- 忘れずにリセットする必要がある -->
 
@@ -230,30 +233,36 @@ $('div.coachtext a').balloon();
   </p>
 <!--classTset-->
       <?php
-      $args = array(
+      $kidscheer = array(
            'post_type' => 'post', // 投稿タイプを指定
            //'posts_per_page' => 2, // 表示するページ数
           'showposts'=> '1',
           'orderby'  => 'date',
           'category_name'=> "kidscheer"
       ); ?>
-      <?php $wp_query = new WP_Query( $args ); ?><!-- クエリの指定 -->
+      <?php $wp_query = new WP_Query( $kidscheer ); ?><!-- クエリの指定 -->
       <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
       <!-- ここに表示するタイトルやコンテンツなどを指定 -->
       <div><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail() ?> </a></div>
-      <p><?php the_content('MORE &raquo;');?></p>
+      <p><?php if(mb_strlen($post->post_content)>50) { $content= mb_substr($post->post_content,0,50) ; echo $content. ･･･ ;
+} else {echo $post->post_content;}?></p>
       <?php endwhile; ?>
       <?php wp_reset_postdata(); ?><!-- 忘れずにリセットする必要がある -->
 </li>
 </ul>
 
+
+			<p class="descript">Starssmileyのチアダンススクールは、世界で通用する力を手に入れるプログラムを用意しています！
+				英語を活用したダンス指導のほか、基礎体力・表現・奉仕の精神を柱に、踊っている自分自身も、
+				見ている人も笑顔で元気にするダンスを目指しています！
+			</p>
 </div>
 <!--/class-->
 
 
 <!--campaign-->
 		<div class="campaign">
-			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_cream.png"><p>体験・キャンペーンのご案内<p></h2>
+			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_cream.png"></p><p>体験・キャンペーンのご案内</p></h2>
 
 
 			<ul>
@@ -268,7 +277,7 @@ $('div.coachtext a').balloon();
 
 <!--voice-->
 		<div class="voice">
-			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_green.png"><p>お客様の声<br><span>VOICE</span><p></h2>
+			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_green.png"></p><p>お客様の声<br><span>VOICE</span></p></h2>
 
 			<ul>
 				<li>
@@ -310,7 +319,7 @@ $('div.coachtext a').balloon();
 
 <!--FAQ-->
 		<div class="faq">
-			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_yellow.png"><p>よくあるご質問<br><span>FAQ</span><p></h2>
+			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_yellow.png"></p><p>よくあるご質問<br><span>FAQ</span></p></h2>
 
 
 			<ul class="clearfix">
@@ -325,7 +334,7 @@ $('div.coachtext a').balloon();
 
 <!--STAFF-->
 		<div class="coach">
-			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_blue.png"><p>スタッフ<br><span>coach</span><p></h2>
+			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_blue.png"></p><p>スタッフ<br><span>coach</span></p></h2>
 
 			<ul class="clearfix">
 				<li>
@@ -379,7 +388,7 @@ $('div.coachtext a').balloon();
 
 <!--smileyHouse-->
 		<div class="smileyHouse">
-			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_yellow.png"><p>スマイリーハウスのご案内<br><span>FAQ</span><p></h2>
+			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_yellow.png"></p><p>スマイリーハウスのご案内<br><span>FAQ</span></p></h2>
 
 
 			<ul class="clearfix">
@@ -433,7 +442,7 @@ $('div.coachtext a').balloon();
 
 <!--NEWS SNS-->
 		<div class="news">
-			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_cream.png"><p>最新情報・会社概要・採用・SNS・プライバシーポリシー<br><span>NEWS</span><p></h2>
+			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_cream.png"></p><p>最新情報・会社概要・採用・SNS・プライバシーポリシー<br><span>NEWS</span></p></h2>
 
         <ul class="flex clearfix bg">
 

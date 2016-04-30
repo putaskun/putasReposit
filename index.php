@@ -12,11 +12,15 @@ $('div.coachtext a').balloon();
 
 
 <ul class="cb-slideshow">
-		<li><span class="spImg">Image 01</span><div><h3>チアで世界に通用する力を手に入れる！<br><span class="spFont">GLOBAL CHEER LEEDING</span></h3></div></li>
-		<li><span class="spImg">Image 02</span><div><h3>チアで世界に通用する力を手に入れる！<br><span class="spFont">GLOBAL CHEER LEEDING</span></h3></div></li>
+		<li><span class="spImg">Image 01</span><div><h3><span><img src="<?php echo get_template_directory_uri(); ?>/images/wtoplogo.png" width="10%"></span><br>チアで世界に通用する力を手に入れる！<br><span class="spFont">GLOBAL CHEER LEEDING</span></h3></div></li>
+		<li><span class="spImg">Image 02</span><div><h3><span><img src="<?php echo get_template_directory_uri(); ?>/images/wtoplogo.png" width="10%"></span><br>チアで世界に通用する力を手に入れる！<br><span class="spFont">GLOBAL CHEER LEEDING</span></h3></div></li>
 		<li><span class="spImg">Image 03</span><div><h3>チアで世界に通用する力を手に入れる！<br><span class="spFont">GLOBAL CHEER LEEDING</span></h3></div></li>
 </ul>
 
+
+<div class="scrolldown">
+  <span>scroll down</span>
+</div>
 
 
 <div class="wrapper">
@@ -25,7 +29,7 @@ $('div.coachtext a').balloon();
 		<div class="about">
 			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_green.png"></p><p>グローバルチアについて<br><span>ABOUT</span></p></h2>
 			<ul class="clearfix">
-				<li><span class="kiso"><br>基礎体力</span></li>
+				<li><span class="kiso">1<br>基礎体力</span></li>
 				<li><span class="hyogen">2<br>表現力</span></li>
 				<li><span class="houshi">3<br>奉仕の精神</span></li>
 			</ul>
@@ -125,39 +129,9 @@ $('div.coachtext a').balloon();
 			<p>ベビーからキッズまで、月齢にあわせたプログラムで指導していきます！</p>
 
 
-			<ul>
-				<li><p>ベビーダンス<span class="classlogo mama"><img src="<?php echo get_template_directory_uri(); ?>/images/classlogo1.png"></span>首据わり～2歳頃までのベビー＆ママ（パパ）</p><p><img src="<?php echo get_template_directory_uri(); ?>/images/classphoto1.png"></p><p>ベビーを抱っこしながらダンスステップを踏むことで、お子様のリズム感を養いながら親子で運動する楽しさをお伝えします。簡単なベビーマッサージや絵本も紹介<br><i class="fa fa-star"></i>単発1,300円</p><p class="moreB">MORE</p></li>
-				<li><p>プレベビーチア<span class="classlogo"><img src="<?php echo get_template_directory_uri(); ?>/images/classlogo2.png"></span>1歳3ヶ月～2歳の親子</p><p><img src="<?php echo get_template_directory_uri(); ?>/images/classphoto1.png"></p><p>よちよち歩き始めた過渡期のベビーたちへ、公園遊び＆屋内遊びの両方を取り入れ、体幹を鍛える基礎となる動きをお伝えします。<br><i class="fa fa-star"></i>3か月ごとにレッスン生募集体験1,750円(体験レッスンは随時受付)</p><p class="moreB">MORE</p></li>
-			</ul>
-			<ul>
-				<li><p>ベビーチア<span class="classlogo baby"><img src="<?php echo get_template_directory_uri(); ?>/images/classlogo3.png"></span>1歳8ヶ月～3歳くらいまでの親子</p><p><img src="<?php echo get_template_directory_uri(); ?>/images/classphoto1.png"></p><p>小走りを始めたキッズ〜未就園児の親子体操。ご挨拶をする・順番を守るなどの社会性も大切にしながら、ダンス・鉄棒・跳び箱・マットなどの学校体育にチャレンジしていきます。<br><i class="fa fa-star"></i>体験1,600円</p><p class="moreB">MORE</p></li>
-				<li><p>キッズチアダンス<span class="classlogo"><img src="<?php echo get_template_directory_uri(); ?>/images/classlogo4.png"></span>3歳～小学校低学年</p><p><img src="<?php echo get_template_directory_uri(); ?>/images/classphoto1.png"></p><p>チアダンスの技術面だけでなく「グローバルに活躍できる人になること」を目標に、挨拶・礼儀など内面を輝かせることも重視したレッスン内容です。
-<br><i class="fa fa-star"></i><strong>毎年3月頃にレッスン生募集。定員になり次第締め切り。</strong></p><p class="moreB">MORE</p></li>
-			</ul>
-
-			<p class="descript">Starssmileyのチアダンススクールは、世界で通用する力を手に入れるプログラムを用意しています！
-				英語を活用したダンス指導のほか、基礎体力・表現・奉仕の精神を柱に、踊っている自分自身も、
-				見ている人も笑顔で元気にするダンスを目指しています！
-			</p>
-
-		</div>
-<!--/class-->
-
-
-
-
-<!--classTset-->
-		<div class="classu">
-			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_pink.png"></p><p class="subtitle">クラスのご紹介<br><span>CLASS</span></p></h2>
-
-			<p>ベビーからキッズまで、月齢にあわせたプログラムで指導していきます！</p>
-
-
 
 <ul>
 <li>
-  <p>ベビーダンス<span class="classlogo mama"><img src="<?php echo get_template_directory_uri(); ?>/images/classlogo1.png"></span>首据わり～2歳頃までのベビー＆ママ（パパ）
-  </p>
       <?php
       $args = array(
            'post_type' => 'post', // 投稿タイプを指定
@@ -169,17 +143,16 @@ $('div.coachtext a').balloon();
       <?php $wp_query = new WP_Query( $args ); ?><!-- クエリの指定 -->
       <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
       <!-- ここに表示するタイトルやコンテンツなどを指定 -->
-      <div><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail() ?> </a></div>
-      <p><?php if(mb_strlen($post->post_content)>50) { $content= mb_substr($post->post_content,0,50) ; echo $content. ･･･ ;
-} else {echo $post->post_content;}?></p>
+      <div class="title"><a href="<?php the_permalink(); ?>"><span class="maintitle">ベビーダンス</span><span class="classlogo mama"><img src="<?php echo get_template_directory_uri(); ?>/images/classlogo1.png"></span><span class="subtitle">首据わり～2歳頃までのベビー＆ママ（パパ）</span>
+      </a></div>
+      <div class="classthumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('class') ?> </a></div>
+      <div><?php $text= mb_substr(strip_tags($post-> post_content), 0, 100); echo $text. ''; ?></div>
       <?php endwhile; ?>
       <?php wp_reset_postdata(); ?><!-- 忘れずにリセットする必要がある -->
 </li>
 <!--/classTest-->
 
 <li>
-  <p>プレベビーチア<span class="classlogo"><img src="<?php echo get_template_directory_uri(); ?>/images/classlogo2.png"></span>1歳3ヶ月～2歳の親子
-  </p>
 <!--classTset-->
       <?php
       $prebaby = array(
@@ -187,15 +160,15 @@ $('div.coachtext a').balloon();
            //'posts_per_page' => 2, // 表示するページ数
           'showposts'=> '1',
           'orderby'  => 'date',
-          'showposts'=> 'prebaby',
-          'category_name'=> ""
+          'category_name'=> "prebaby"
       ); ?>
       <?php $wp_query = new WP_Query( $prebaby ); ?><!-- クエリの指定 -->
       <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
       <!-- ここに表示するタイトルやコンテンツなどを指定 -->
-      <div><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail() ?> </a></div>
-      <p><?php if(mb_strlen($post->post_content)>50) { $content= mb_substr($post->post_content,0,50) ; echo $content. ･･･ ;
-} else {echo $post->post_content;}?></p>
+      <div class="title"><a href="<?php the_permalink(); ?>"><span class="maintitle">プレベビーチア</span><span class="classlogo"><img src="<?php echo get_template_directory_uri(); ?>/images/classlogo2.png"></span><span class="subtitle">1歳3ヶ月～2歳の親子</span>
+      </a></div>
+      <div class="classthumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('class') ?> </a></div>
+      <div><?php $text= mb_substr(strip_tags($post-> post_content), 0, 100); echo $text. ''; ?></div>
       <?php endwhile; ?>
       <?php wp_reset_postdata(); ?><!-- 忘れずにリセットする必要がある -->
 
@@ -205,8 +178,6 @@ $('div.coachtext a').balloon();
 
 <ul>
 <li>
-  <p>ベビーチア<span class="classlogo baby"><img src="<?php echo get_template_directory_uri(); ?>/images/classlogo3.png"></span>1歳8ヶ月～3歳くらいまでの親子
-  </p>
 <!--classTset-->
       <?php
       $babycheer = array(
@@ -219,9 +190,10 @@ $('div.coachtext a').balloon();
       <?php $wp_query = new WP_Query( $babycheer ); ?><!-- クエリの指定 -->
       <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
       <!-- ここに表示するタイトルやコンテンツなどを指定 -->
-      <div><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail() ?> </a></div>
-      <p><?php if(mb_strlen($post->post_content)>50) { $content= mb_substr($post->post_content,0,50) ; echo $content. ･･･ ;
-} else {echo $post->post_content;}?></p>
+      <div class="title"><a href="<?php the_permalink(); ?>"><span class="maintitle">ベビーチア</span><span class="classlogo baby"><img src="<?php echo get_template_directory_uri(); ?>/images/classlogo3.png"></span><span class="subtitle">1歳8ヶ月～3歳くらいまでの親子</span>
+      </a></div>
+      <div class="classthumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('class') ?> </a></div>
+      <div><?php $text= mb_substr(strip_tags($post-> post_content), 0, 100); echo $text. ''; ?></div>
       <?php endwhile; ?>
       <?php wp_reset_postdata(); ?><!-- 忘れずにリセットする必要がある -->
 
@@ -229,8 +201,6 @@ $('div.coachtext a').balloon();
 </li>
 
 <li>
-  <p>キッズチアダンス<span class="classlogo"><img src="<?php echo get_template_directory_uri(); ?>/images/classlogo4.png"></span>3歳～小学校低学年
-  </p>
 <!--classTset-->
       <?php
       $kidscheer = array(
@@ -243,9 +213,12 @@ $('div.coachtext a').balloon();
       <?php $wp_query = new WP_Query( $kidscheer ); ?><!-- クエリの指定 -->
       <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
       <!-- ここに表示するタイトルやコンテンツなどを指定 -->
-      <div><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail() ?> </a></div>
-      <p><?php if(mb_strlen($post->post_content)>50) { $content= mb_substr($post->post_content,0,50) ; echo $content. ･･･ ;
-} else {echo $post->post_content;}?></p>
+      <div class="title"><a href="<?php the_permalink(); ?>"><span class="maintitle">キッズチアダンス</span><span class="classlogo"><img src="<?php echo get_template_directory_uri(); ?>/images/classlogo4.png"></span><span class="subtitle">3歳～小学校低学年</span>
+      </a></div>
+      <div class="classthumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('class') ?> </a></div>
+      <div>
+<?php $text= mb_substr(strip_tags($post-> post_content), 0, 100); echo $text. ''; ?>
+</div>
       <?php endwhile; ?>
       <?php wp_reset_postdata(); ?><!-- 忘れずにリセットする必要がある -->
 </li>
@@ -266,11 +239,25 @@ $('div.coachtext a').balloon();
 
 
 			<ul>
-				<li><p><img src="<?php echo get_template_directory_uri(); ?>/images/campaign.png"></p><p>チアダンスは毎年2月・3月頃に体験会を行っております。それ以外の月は、個別にお問合せ下さい。</p></li>
-				<li><p><img src="<?php echo get_template_directory_uri(); ?>/images/campaign.png"></p><p>ベビーダンス、プレ・ベビーチア、ベビーチア、
-この他のレッスンについては、随時体験受付中です。</p></li>
-				<li><p><img src="<?php echo get_template_directory_uri(); ?>/images/campaign.png"></p><p>季節にあわせたイベントも行っております。
-詳しくはスケジュール表をご覧下さい。</p></li>
+        <?php
+        $kidscheer = array(
+             'post_type' => 'post', // 投稿タイプを指定
+             //'posts_per_page' => 2, // 表示するページ数
+            'showposts'=> '2',
+            'orderby'  => 'date',
+            'category_name'=> "campaign"
+        ); ?>
+        <?php $wp_query = new WP_Query( $kidscheer ); ?><!-- クエリの指定 -->
+        <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
+        <!-- ここに表示するタイトルやコンテンツなどを指定 -->
+				<li>
+          <div><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('campaign') ?> </a></div>
+          <div>
+    <?php $text= mb_substr(strip_tags($post-> post_content), 0, 90); echo $text. ''; ?>
+          </div>
+        </li>
+      <?php endwhile; ?>
+      <?php wp_reset_postdata(); ?><!-- 忘れずにリセットする必要がある -->
 			</ul>
 		</div>
 <!--/campaign-->
@@ -282,8 +269,8 @@ $('div.coachtext a').balloon();
 			<ul>
 				<li>
           <span class="comme"><img src="<?php echo get_template_directory_uri(); ?>/images/voicecomme.png"></span>
+          <span class="commeText">ベビーチアを通して積極的になりました！親子の思い出づくりにもぴったり♪</span>
           <p>
-            <span class="commeText">ベビーチアを通して積極的になりました！親子の思い出づくりにもぴったり♪</span>
             <img src="<?php echo get_template_directory_uri(); ?>/images/voice1.png">
           </p>
           <p class="commedscrpt">Fちゃん親子</p>
@@ -293,8 +280,8 @@ $('div.coachtext a').balloon();
 
 				<li>
           <span class="comme"><img src="<?php echo get_template_directory_uri(); ?>/images/voicecomme.png"></span>
+          <span class="commeText">一度も休みたい、辞めたいと言うことはなく、とにかくチアを楽しんでいます！</span>
           <p>
-            <span class="commeText">一度も休みたい、辞めたいと言うことはなく、とにかくチアを楽しんでいます！</span>
             <img src="<?php echo get_template_directory_uri(); ?>/images/voice2.png">
           </p>
           <p class="commedscrpt">Sちゃん親子</p>
@@ -304,8 +291,8 @@ $('div.coachtext a').balloon();
 
 				<li>
           <span class="comme"><img src="<?php echo get_template_directory_uri(); ?>/images/voicecomme.png"></span>
+          <span class="commeText">コーチのみなさんに、心の大切な部分を育てていただきました♪</span>
           <p>
-            <span class="commeText">コーチのみなさんに、心の大切な部分を育てていただきました♪</span>
             <img src="<?php echo get_template_directory_uri(); ?>/images/voice3.png">
           </p>
           <p class="commedscrpt">Mくん親子</p>
@@ -445,20 +432,9 @@ $('div.coachtext a').balloon();
 			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_cream.png"></p><p>最新情報・会社概要・採用・SNS・プライバシーポリシー<br><span>NEWS</span></p></h2>
 
         <ul class="flex clearfix bg">
-
-
-
-
-        	</ul>
-
-
-
-        <ul class="flex clearfix bg">
           <?php
           $newsan = array(
                'post_type' => 'post', // 投稿タイプを指定
-               //'posts_per_page' => 2, // 表示するページ数
-
                'showposts'=> '3',
                'orderby'  => 'date'
           ); ?>
@@ -466,21 +442,14 @@ $('div.coachtext a').balloon();
           <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
           <!-- ここに表示するタイトルやコンテンツなどを指定 -->
           <li>
-            <p><a href="<?php the_permalink() ?>"><?php the_title(); ?><?php the_category('') ?><?php the_post_thumbnail() ?> </a></p>
+            <div class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></div>
+            <div class="title"><a href="<?php the_permalink() ?>"><?php the_category('') ?></a></div>
+            <p><a href="<?php the_permalink() ?>"><?php the_post_thumbnail('news') ?></a></p>
             <p><?php if(mb_strlen($post->post_content)>38) { $content= mb_substr($post->post_content,0,38) ; echo $content. ･･･ ;
 } else {echo $post->post_content;}?></p>
           </li>
           <?php endwhile; ?>
           <?php wp_reset_postdata(); ?><!-- 忘れずにリセットする必要がある -->
-
-        			</div>
-
-
-        </div>
-
-
-
-
 
 		</div>
 <!--/NEWS SNS-->

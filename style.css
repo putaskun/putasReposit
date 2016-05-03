@@ -59,11 +59,23 @@ margin:auto;
 .flex > div.post:nth-child(-n+2){
 margin-right: 5%;
 }
+
+div.title > a{
+  color: #333333;
+  text-decoration: none;
+}
+
+
 div.navigation{
   clear: both;
   display: block!important;
   width: 100%;
   background-color: #EEE;
+}
+
+/*記事ページcss*/
+.ribon{
+  background-image: url();
 }
 
 
@@ -75,15 +87,15 @@ body,div#header{
   margin:0;
   overflow-x: hidden;
 }
-@media screen and (min-device-width: 481px) {
+@media screen and (min-device-width: 980px) {
   body > div.wrapper{
     background-color: #fff;
-    width: 68%;
+    width: 980px;
     margin: 0 auto;
 
   }
 }
-@media screen and (max-device-width: 480px) {
+@media screen and (max-device-width: 979px) {
   div.wrapper{
     width: 90%;
     margin: 0 auto;
@@ -93,24 +105,31 @@ body,div#header{
 
 
 i.fa-star{
-  color: blue;
+  color: #878787;
 }
 
-/*div.wrapper{
-  width: 68%;
-  margin: 0 auto;
-}*/
+
 /*共通ボタン MORE*/
 p.moreB{
   width: 100%;
   background-color: #878787;
-  color: #fff;
   text-align: center;
-  line-height: 2.5rem;
-  height: 2.5rem;
+  line-height: 3.4rem;
+  height: 3.4rem;
+  font-weight: 500;
 }
-
-
+p.moreB > a{
+  display: block;
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+    font-family:"Avenir","Montserrat";
+    letter-spacing: 0.3rem;
+}
+p.moreB > a:hover{
+  color: #949494;
+  background-color: #565656;
+}
 /*header*/
 
 body > div#header{
@@ -132,19 +151,7 @@ div#header > nav{
   opacity: 1;
   position: relative;
 }
-/*div#header > nav > div{
-width:20%;
-float: right;
-text-align: center;
-vertical-align: middle;
-height: 5rem;
-line-height: 5rem;
-border-radius: 12px;
-background-color: #000;
-color: #fff;
-margin-top: 2rem;
-margin-bottom: 2rem;
-}*/
+
 
 div#header > nav > ul {
   display: flex;
@@ -152,8 +159,6 @@ div#header > nav > ul {
   width: 88%;
   height: 6rem;
   margin: 1% auto;
-
-
 }
 div#header > nav > ul > li{
   text-align: center;
@@ -162,16 +167,15 @@ line-height:6rem;
 vertical-align: middle;
 }
 div#header > nav > ul > li.menuTitle{
-  width:7%;
-
-  margin-left: 2%;
+  width:10%;
+  margin-left: 1%;
 
 }
 div#header > nav > ul > li.menuAbout {
-  margin-left: 6%;
+  margin-left: 5%;
 
   vertical-align: middle;
-  width:23%;
+  width:25%;
 }
 div#header > nav > ul > li.menuClass {
   width:12%;
@@ -223,127 +227,45 @@ div#header > nav > ul > li.menuTitle > a > img{
   width: 100%;
 }
 
-/*.box__area,
-.box__area:after {
-    position: absolute;
-    /*width: 100%;
-    height: 100%;*/
-    /*top: 0px;
-    left: 0px;
-    z-index: 0;
-}*/
-/*.box__area:after {
-    content: '';
-    background: transparent url(http://jsrun.it/assets/Q/s/j/P/QsjPn) repeat top left;
+
+div.scrolldown{
+  position: fixed;
+  top:94%;
+  left: 46%;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  height: 2rem;
+  /*border: 1px solid #fff;
+  border-radius: 10px;*/
+  width:10rem;
+  font-weight: 800;
+  text-align: center;
+  color: #fff;
 }
-.box {
-  width: 100vw;
-  height: 100vh;
-  background-color: #fff;
 
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column
-  flex-direction: column
-}
-/*@media screen and (max-width: 320px) and (max-width: 480px) {
-  .box {
-    width: 320px;
-    height: 480px;
-  }
-}*/
-
-/*.box__bg_photo {
-  background-image: url(http://jsrun.it/assets/Q/s/j/P/QsjPn);
-  background-size: cover;
-  background-position: center;
-}
-.box__bg_photo2 {
-  background-image: url(images/topmain1.jpg);
-  background-size: cover;
-  background-position: center;
-}
-.box__bg_photo3 {
-  background-image: url(http://jsrun.it/assets/Q/s/j/P/QsjPn);
-  background-size: cover;
-  background-position: center;
-}*/
-
-
-/*.box__area {
-  height: 100vh;
-  overflow-y: auto;
-
-  /* スクロールのスナップ位置を100vhごとに設定 */
-/*  -webkit-scroll-snap-points-y: repeat(100vh);
-  -ms-scroll-snap-points-y: repeat(100vh);
-  scroll-snap-points-y: repeat(100vh);
-
-  /* スナップ位置に強制的にスクロール */
-  /*-webkit-scroll-snap-type: mandatory;
-  -ms-scroll-snap-type: mandatory;
-  scroll-snap-type: mandatory;
-}
-*/
-
-/*body > div.mainscreen{
-  margin-top: 0rem;
-  width: 100%;
-  padding-top: 50%;
-  background-image: url(images/topmain1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 100;
-  opacity: 0.8;
-
-}*/
 div.wrapper > div{
 margin-top: 10rem;
 z-index: 333333;
 width: 100%;
 }
 
-div.wrapper > div h2{
+div.wrapper div h2 p{
   text-align: center;
-  margin-top: 2rem auto;
+  margin: 2rem auto;
   font-weight: bold;
 }
 div.wrapper >div > h2{
   position: relative;
 }
 div.wrapper > div > h2 > p > img{
-  width: 7%;
+  width: 4.5%;
 }
 div.wrapper > div > h2 > p{
   font-family:"Avenir","Montserrat";
-  font-weight: 100;
   letter-spacing: 0.3rem;
+  margin-bottom: 0.5%;
 }
-/*div.wrapper > div > h2 > p.pomlogo{
 
-  background-image: url(../images/pom_pink.png);
-  background-repeat: no-repeat;
-  background: contain;
-  background-size: 100%;
-  width:10%;
-  padding-top: 10%;
-  margin: auto;
-  position: absolute;
-  top:-200%;
-  left: 45%;
-  z-index: 10;
-}*/
 div.wrapper > div > h2 > p.subtitle{
   position: relative;
   z-index: 99999;
@@ -354,6 +276,12 @@ div.wrapper > div > h2 > p{
 
 div.wrapper > div > h2 > p > span{
   font-size: 1.5rem;
+}
+.descript{
+  background-color: #fff;
+  text-align: left;
+  font-size: 1.6rem!important;
+  line-height: 2.3rem;
 }
 /*-
 グローバルチアについてABOUT--------------------------------------------------------------------------*/
@@ -368,7 +296,7 @@ opacity: 0.9;
 }
 
 div.about > ul{
-  width: 90%;
+  width: 83%;
   margin: 5rem auto;
 }
 
@@ -379,27 +307,32 @@ div.about > ul > li{
   background-repeat: no-repeat;
   background: contain;
   background-size: 100% auto;
-  width: 24%;
-  padding-top: 24%;
+  width: 23%;
+  padding-top: 23%;
 }
 div.about > ul > li:nth-child(-n+2){
-  margin-right: 10%;
+  margin-right: 15%;
 }
 div.about > ul > li > span{
+  font-size: 1.6rem;
+  font-weight: 500;
   position: absolute;
   text-align: center;
   top:37%;
 }
 div.about > ul > li > span.kiso{
-  left:37%;
+  left:36%;
 }
 div.about > ul > li > span.hyogen{
-  left:42%;
+  left:40%;
 }
 div.about > ul > li > span.houshi{
-  left:35%;
+  left:32%;
 }
-
+div.about > p.descript{
+  width: 83%;
+  margin: 0 auto;
+}
 /*-
 7つのこと--------------------------------------------------------------------------*/
 div.about7{
@@ -419,7 +352,6 @@ div.about7 > ul{
 }
 div.about7 > ul > li{
   width: 100%;
-  /*overflow: hidden;*/
   font-size: 1.2rem;
   margin-top: 5%;
   vertical-align: middle;
@@ -472,6 +404,7 @@ div.about7 > ul > li > p.ptext{
   height: auto;
   font-size: 1.6rem;
   line-height: 2.5rem;
+  text-align: left;
 }
 /*奇数------------------------------------------------*/
 div.about7 > ul > li:nth-of-type(odd) > p.ptext{
@@ -492,13 +425,7 @@ div.about7 > ul > li:nth-child(-n+7){
     background-color: #F9F9F9;
     border-radius: 100px;
 }
-li.descript{
-  background-color: #fff;
-  text-align: left;
-  font-size: 1.6rem!important;
-  line-height: 2rem;
 
-}
 
 
 /*以下各項目設定---------------------------------------*/
@@ -557,39 +484,81 @@ div.classu > ul > li{
   border: 1px solid #eee;
   width: 45%;
   margin-bottom: 5%;
+  position: relative;
 }
 div.classu > ul > li:last-child{
   margin-left: 5%;
 }
-div.classu > ul > li > p > span{
-  padding-left: 5%;
-  padding-right: 5%;
+div.classu > ul > li > div.title{
+  margin-left: 4.6%;
+  margin-top: 2%;
 }
-div.classu > ul > li > p > span > img{
+div.classu > ul > li > div.title > a > span{
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+div.classu > ul > li > div.title > a > span > img{
   width: 100%;
-    vertical-align: bottom;;
+  vertical-align: bottom;;
 }
 div.classu > ul > li > p{
   margin: 3% auto;
   width: 90%;
 }
-div.classu > ul > li > p > span.classlogo{
+div.classu > ul > li > div.title > a > span.classlogo{
   display: inline-block;
   width: 12%;
   line-height: 6rem;
-  vertical-align: bottom;;
+  vertical-align: bottom;
+  opacity: 0.5;
 }
 
-div.classu > ul > li > p > span.mama{
-  width: 8%;
+div.classu > ul > li > div.title > a > span.mama{
+  width:7%;
 }
-div.classu > ul > li > p > span.baby{
-  width: 10%;
+div.classu > ul > li > div.title > a > span.baby{
+  width:9%;
 }
-div.classu > ul > li > p > img{
-  width: 100%;
+div.classu > ul > li > div.title > a > span.maintitle{
+  font-weight: 600;
 }
-
+div.classu > ul > li > div.title > a > span.subtitle{
+  width: 50%;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-left: 0;
+}
+div.classu > ul > li > div.classthumbnail{
+  margin-top: 4%;
+  margin-left: 4.6%;
+  margin-bottom: 3%;
+}
+div.classu > ul > li > div.classdescript{
+  margin: 4.6%;
+}
+div.classu > ul > li > div.classdescript > p{
+  margin: 4%;
+  font-weight: 500;
+  position: relative;
+}
+div.classu > ul > li > div.classdescript > p > span{
+  display: inline-block;
+  width: 96%;
+  position: relative;
+  left: 4.5%;
+}
+div.classu > ul > li > div.classdescript > p > img{
+  width: 4%;
+  position: absolute;
+  top:2%;
+  display: inline-block;
+}
+p.classbtn{
+  position: absolute;
+  bottom:0.2%;
+  left: 5.6%;
+}
 /*-
 キャンペーンcampaign-------------------------------------------------------------------------*/
 div.campaign > ul{
@@ -598,17 +567,21 @@ div.campaign > ul{
   padding-left: 0;
 }
 div.campaign > ul > li{
-  width: 32%;
-  background-color: #eee;
+  width: 48%;
+
 }
-div.campaign > ul > li:nth-child(-n+2){
-  margin-right: 2%;
+div.campaign > ul > li:nth-child(-n+1){
+  margin-right: 4%;
 }
 div.campaign > ul > li > p{
   width: 100%;
 }
 div.campaign > ul > li > p > img{
   width: 100%;
+}
+div.campaign > ul > li > div.campaign-post{
+  margin-left: 7.5%;
+  margin-top: 5%;
 }
 /*-
 お客様の声voice-------------------------------------------------------------------------*/
@@ -625,22 +598,26 @@ div.voice > ul > li:nth-child(-n+2){
   margin-right: 7%;
 }
 div.voice > ul > li > p{
+  width: 80%;
+  margin: 0 auto;
   font-size: 1.5rem;
   line-height: 2.3rem;
 }
-div.voice > ul > li img{
+div.voice > ul > li span img{
   width: 100%;
 }
-
+div.voice > ul > li > p > img{
+  width: 100%;
+}
 div.voice > ul > li > span.comme{
   position: absolute;
   top:-3%;
   width: 94%;
   left:3%;
 }
-div.voice > ul > li > p > span.commeText{
+div.voice > ul > li > span.commeText{
   position: absolute;
-  top:-9%;
+  top:-6%;
   left:8%;
   z-index: 88888;
   font-size: 1.5rem;
@@ -799,14 +776,7 @@ div.news > ul > li{
 div.news ul.blog_info > li{
   float: left;
 }
-/*div.news > ul > li > div.new{
-  background-color: red;
-  color: #fff;
-  width: 5rem;
-  text-align: center;
-  font-size: 1.4rem;
-  font-weight: bold;
-}*/
+
 
 
 div.post{

@@ -23,10 +23,11 @@ $('div.coachtext a').balloon();
 </div>
 
 
-<div class="wrapper">
+<div class="wrapper bgwhite">
 
 <!--about-->
-		<div class="about">
+    <div id="uchabout"></div>
+		<div id="about">
 			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_green.png"></p><p>グローバルチアについて<br><span>ABOUT</span></p></h2>
 			<ul class="clearfix">
 				<li><span class="kiso">1<br>基礎体力</span></li>
@@ -123,7 +124,7 @@ $('div.coachtext a').balloon();
 
 
 <!--class-->
-		<div class="classu">
+		<div id="classu">
 			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_pink.png"></p><p class="subtitle">クラスのご紹介<br><span>CLASS</span></p></h2>
 
 			<p>ベビーからキッズまで、月齢にあわせたプログラムで指導していきます！</p>
@@ -131,6 +132,7 @@ $('div.coachtext a').balloon();
 
 
 <ul>
+<!--babydance-->
 <li>
       <?php
       $args = array(
@@ -143,17 +145,28 @@ $('div.coachtext a').balloon();
       <?php $wp_query = new WP_Query( $args ); ?><!-- クエリの指定 -->
       <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
       <!-- ここに表示するタイトルやコンテンツなどを指定 -->
-      <div class="title"><a href="<?php the_permalink(); ?>"><span class="maintitle">ベビーダンス</span><span class="classlogo mama"><img src="<?php echo get_template_directory_uri(); ?>/images/classlogo1.png"></span><span class="subtitle">首据わり～2歳頃までのベビー＆ママ（パパ）</span>
+      <div class="title"><a href="<?php the_permalink(); ?>"><span class="maintitle">ベビーダンス</span><span class="classlogo mama"><img src="<?php echo get_template_directory_uri(); ?>/images/classlogo1.png"></span><span class="subtitle">首据わり～2歳頃までのベビー＆ママ(パパ)</span>
       </a></div>
-      <div class="classthumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('class') ?> </a></div>
-      <div><?php $text= mb_substr(strip_tags($post-> post_content), 0, 100); echo $text. ''; ?></div>
+      <div class="classthumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail() ?> </a></div>
+
+      <div class="classdescript"><a href="<?php the_permalink(); ?>">ベビーを抱っこしながらダンスステップを踏むことで、お子様のリズム感を養いながら親子で運動する楽しさをお伝えします。簡単なベビーマッサージや絵本も紹介。
+
+          <p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_pink.png" alt=""><span>単発1,300円</span></p>
+      </a></div>
+
+      <p class="moreB classbtn"><a href="<?php the_permalink(); ?>">MORE</a></p>
+      <!--記事コンテンツ-->
+      <!--<div>
+        <?php //$text= mb_substr(strip_tags($post-> post_content), 0, 100); echo $text. ''; ?>
+      </div>-->
+      <!--記事コンテンツ-->
       <?php endwhile; ?>
       <?php wp_reset_postdata(); ?><!-- 忘れずにリセットする必要がある -->
 </li>
-<!--/classTest-->
+<!--/babydance-->
 
+<!--prebaby-->
 <li>
-<!--classTset-->
       <?php
       $prebaby = array(
            'post_type' => 'post', // 投稿タイプを指定
@@ -167,18 +180,30 @@ $('div.coachtext a').balloon();
       <!-- ここに表示するタイトルやコンテンツなどを指定 -->
       <div class="title"><a href="<?php the_permalink(); ?>"><span class="maintitle">プレベビーチア</span><span class="classlogo"><img src="<?php echo get_template_directory_uri(); ?>/images/classlogo2.png"></span><span class="subtitle">1歳3ヶ月～2歳の親子</span>
       </a></div>
-      <div class="classthumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('class') ?> </a></div>
-      <div><?php $text= mb_substr(strip_tags($post-> post_content), 0, 100); echo $text. ''; ?></div>
+      <div class="classthumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail() ?> </a></div>
+
+      <div class="classdescript"><a href="<?php the_permalink(); ?>">よちよち歩き始めた過渡期のベビーたちへ、公園遊び＆屋内遊びの両方を取り入れ、体幹を鍛える基礎となる動きをお伝えします。
+
+            <p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_pink.png" alt=""><span>３ヵ月ごとにレッスン生募集
+        体験1,750円（体験レッスンは随時受付）</span></p>
+      </a></div>
+
+      <p class="moreB"><a href="<?php the_permalink(); ?>">MORE</a></p>
+      <!--記事コンテンツ-->
+      <!--<div>
+        <?php //$text= mb_substr(strip_tags($post-> post_content), 0, 100); echo $text. ''; ?>
+      </div>-->
+      <!--記事コンテンツ-->
       <?php endwhile; ?>
       <?php wp_reset_postdata(); ?><!-- 忘れずにリセットする必要がある -->
 
-<!--/classTest-->
 </li>
+<!--/prebaby-->
 </ul>
 
 <ul>
+<!--babycheer-->
 <li>
-<!--classTset-->
       <?php
       $babycheer = array(
            'post_type' => 'post', // 投稿タイプを指定
@@ -192,16 +217,27 @@ $('div.coachtext a').balloon();
       <!-- ここに表示するタイトルやコンテンツなどを指定 -->
       <div class="title"><a href="<?php the_permalink(); ?>"><span class="maintitle">ベビーチア</span><span class="classlogo baby"><img src="<?php echo get_template_directory_uri(); ?>/images/classlogo3.png"></span><span class="subtitle">1歳8ヶ月～3歳くらいまでの親子</span>
       </a></div>
-      <div class="classthumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('class') ?> </a></div>
-      <div><?php $text= mb_substr(strip_tags($post-> post_content), 0, 100); echo $text. ''; ?></div>
+      <div class="classthumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail() ?> </a></div>
+
+      <div class="classdescript"><a href="<?php the_permalink(); ?>">小走りを始めたキッズ～未就園児の親子体操。ご挨拶をする・順番を守るなどの社会性も大切にしながら、ダンス・鉄棒・跳び箱・マットなどの学校体育にチャレンジしていきます。
+
+          <p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_pink.png" alt=""><span>体験1,600円</span></p>
+      </a></div>
+
+      <p class="moreB classbtn"><a href="<?php the_permalink(); ?>">MORE</a></p>
+      <!--記事コンテンツ-->
+      <!--<div>
+        <?php //$text= mb_substr(strip_tags($post-> post_content), 0, 100); echo $text. ''; ?>
+      </div>-->
+      <!--記事コンテンツ-->
       <?php endwhile; ?>
       <?php wp_reset_postdata(); ?><!-- 忘れずにリセットする必要がある -->
 
-<!--/classTest-->
 </li>
+<!--/babycheer-->
 
+<!--kidscheer-->
 <li>
-<!--classTset-->
       <?php
       $kidscheer = array(
            'post_type' => 'post', // 投稿タイプを指定
@@ -213,15 +249,27 @@ $('div.coachtext a').balloon();
       <?php $wp_query = new WP_Query( $kidscheer ); ?><!-- クエリの指定 -->
       <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
       <!-- ここに表示するタイトルやコンテンツなどを指定 -->
-      <div class="title"><a href="<?php the_permalink(); ?>"><span class="maintitle">キッズチアダンス</span><span class="classlogo"><img src="<?php echo get_template_directory_uri(); ?>/images/classlogo4.png"></span><span class="subtitle">3歳～小学校低学年</span>
+      <div class="title"><a href="<?php the_permalink(); ?>"><span class="maintitle">キッズチアダンス</span><span class="classlogo"><img src="<?php echo get_template_directory_uri(); ?>/images/classlogo4.png"></span><span class="subtitle">年少～</span>
       </a></div>
-      <div class="classthumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('class') ?> </a></div>
-      <div>
-<?php $text= mb_substr(strip_tags($post-> post_content), 0, 100); echo $text. ''; ?>
-</div>
+      <div class="classthumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail() ?> </a></div>
+
+      <div class="classdescript"><a href="<?php the_permalink(); ?>">チアダンスの技術面だけでなく「グローバルに活躍できる人になること」を目標に、挨拶・礼儀など内面を輝かせることも重視したレッスン内容です。
+
+          <p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_pink.png" alt=""><span>毎年3月頃にレッスン生募集。
+       定員になり次第締め切り。</span></p>
+     </a></div>
+
+     <p class="moreB"><a href="<?php the_permalink(); ?>">MORE</a></p>
+      <!--記事コンテンツ-->
+      <!--<div>
+        <?php //$text= mb_substr(strip_tags($post-> post_content), 0, 100); echo $text. ''; ?>
+      </div>-->
+      <!--記事コンテンツ-->
       <?php endwhile; ?>
       <?php wp_reset_postdata(); ?><!-- 忘れずにリセットする必要がある -->
 </li>
+<!--/kidscheer-->
+
 </ul>
 
 
@@ -251,10 +299,10 @@ $('div.coachtext a').balloon();
         <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
         <!-- ここに表示するタイトルやコンテンツなどを指定 -->
 				<li>
-          <div><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('campaign') ?> </a></div>
-          <div>
-    <?php $text= mb_substr(strip_tags($post-> post_content), 0, 90); echo $text. ''; ?>
-          </div>
+          <div class="campaign-post"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail() ?></a></div>
+          <div class="campaign-postcontent"><a href="<?php the_permalink(); ?>">
+            <?php $text= mb_substr(strip_tags($post-> post_content), 0, 90); echo $text. ''; ?>
+          </a></div>
         </li>
       <?php endwhile; ?>
       <?php wp_reset_postdata(); ?><!-- 忘れずにリセットする必要がある -->
@@ -263,7 +311,7 @@ $('div.coachtext a').balloon();
 <!--/campaign-->
 
 <!--voice-->
-		<div class="voice">
+		<div id="voice">
 			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_green.png"></p><p>お客様の声<br><span>VOICE</span></p></h2>
 
 			<ul>
@@ -320,7 +368,7 @@ $('div.coachtext a').balloon();
 <!--/FAQ-->
 
 <!--STAFF-->
-		<div class="coach">
+		<div id="coach">
 			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_blue.png"></p><p>スタッフ<br><span>coach</span></p></h2>
 
 			<ul class="clearfix">
@@ -380,7 +428,7 @@ $('div.coachtext a').balloon();
 
 			<ul class="clearfix">
 				<li>
-					<img src="<?php echo get_template_directory_uri(); ?>/images/smileyhouse.jpg" width="100%;">
+					<a href="<?php get_category_link( 13 ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/smileyhouse.jpg"></a>
         </li>
         <li class="textPdding">
           <div class="textPdding">
@@ -399,11 +447,11 @@ $('div.coachtext a').balloon();
             </tr>
             <tr>
               <th>メール</th>
-              <td>info@stars-smily.com</td>
+              <td><a href="mailto:info@stars-smily.com">info@stars-smily.com</td>
             </tr>
             <tr>
               <th>専用HP</th>
-              <td>http://ameblo.jp/stars-smiley</td>
+              <td><a href="http://ameblo.jp/stars-smiley">http://ameblo.jp/stars-smiley</a></td>
             </tr>
           </table>
         </div>
@@ -411,10 +459,10 @@ $('div.coachtext a').balloon();
       </ul>
       <ul>
 				<li>
-          <div class="textPdding">
+          <div class="textPdding"><a href="<?php get_category_link( 13 ); ?>">
             <h4>スマイリーハウスについて</h4>
           横浜市青葉区美しが丘の住宅街に佇む一軒家の親子サロン。チアダンスをはじめとする各レッスンのほか、季節に合わせたイベントを行っています。世界の選りすぐりのおもちゃを毎月少しずつ買い揃え、お子様の学ぶ心も大切に。庭のある落ち着いたスタジオは、時間貸も承っておりますので随時お問合せ下さい。
-          </div>
+        </a></div>
         </li>
           <li>
           <iframe src="http://localhost:8888/googlemap.html" width="100%"height="220px"frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -443,21 +491,58 @@ $('div.coachtext a').balloon();
           <!-- ここに表示するタイトルやコンテンツなどを指定 -->
           <li>
             <div class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></div>
-            <div class="title"><a href="<?php the_permalink() ?>"><?php the_category('') ?></a></div>
-            <p><a href="<?php the_permalink() ?>"><?php the_post_thumbnail('news') ?></a></p>
-            <p><?php if(mb_strlen($post->post_content)>38) { $content= mb_substr($post->post_content,0,38) ; echo $content. ･･･ ;
-} else {echo $post->post_content;}?></p>
+            <div class="title"><a href="<?php the_permalink() ?>"><?php the_category() ?></a></div>
+            <!--<div class="thumbox" style="background:url(<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>)"><a href="<?php the_permalink() ?>"></a></div>-->
+            <div class="thumbox"><a href="<?php the_permalink() ?>"><?php the_post_thumbnail('news') ?></a></div>
+            <p><a href="<?php the_permalink() ?>"><?php if(mb_strlen($post->post_content)>53) { $content= mb_substr($post->post_content,0,53) ; echo $content. ･･･ ;
+} else {echo $post->post_content;}?></a></p>
           </li>
           <?php endwhile; ?>
           <?php wp_reset_postdata(); ?><!-- 忘れずにリセットする必要がある -->
+</ul>
+
+
+        <ul class="sns">
+          <li class="bgYellow omoshikomi">
+            <a href="">
+            <p class="bgimgO"><img src="<?php echo get_template_directory_uri(); ?>/images/omoshikomi.png"></p>
+            <p>お申込み</p>
+          </a>
+          </li>
+          <li class="bgYellow saiyo">
+            <a href="">
+            <p class="bgimgS"><img src="<?php echo get_template_directory_uri(); ?>/images/saiyo.png"></p>
+            <p>採用情報</p>
+          </a>
+          </li>
+          <li class="">
+          </li>
+        </ul>
 
 		</div>
+
+
 <!--/NEWS SNS-->
 
 
 	<!-- / warpper-->
 
-<div>
+</div>
+
+  <!--FOOTER-->
+<footer>
+  <nav class="wrapper">
+    <ul>
+      <li><a href="">会社概要</a></li>
+      <li><a href="">個人情報・プライバシーポリシー</a></li>
+    </ul>
+    <p>© 2016 STARS SMILEY.</p>
+  </nav>
+
+</footer>
+  <!--/FOOTER-->
+
+
 
 </body>
 </html>

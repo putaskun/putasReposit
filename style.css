@@ -49,16 +49,7 @@ th{
   content: '';
   clear:both;
 }
-.flex{
-}
-.flex > div.post{
-  float: left;
-width: 30%;
-margin:auto;
-}
-.flex > div.post:nth-child(-n+2){
-margin-right: 5%;
-}
+
 
 div.title > a{
   color: #333333;
@@ -73,11 +64,22 @@ div.navigation{
   background-color: #EEE;
 }
 
+
 /*記事ページcss*/
 .ribon{
   background-image: url();
 }
+.flex{
+}
+.flex > div.post{
+  float: left;
+width: 30%;
+margin:auto;
+}
 
+.flex > div.post:nth-child(-n+2){
+margin-right: 5%;
+}
 
 body,div#header{
   font-size: 1.4rem;
@@ -993,4 +995,31 @@ div.post-contents{
 }
 div.right-sidebar{
   width: 30%;
+}
+
+/*サイドバー*/
+div.right-sidebar input#searchsubmit{
+  font-size: 0.5rem;
+}
+div.right-sidebar li a{
+  color: #333333;
+  text-decoration: none;
+}
+div.right-sidebar li a:hover{
+  text-decoration: underline;
+}
+div.right-sidebar li{
+  line-height: 3rem;
+  padding-left: 1rem;
+  font-weight: 500;
+}
+div.right-sidebar h2.widgettitle{
+  margin-top: 3rem;
+  height: 4rem;
+  line-height: 4rem;
+}
+/*カテゴリーページ*/
+ul.category li{
+  width: 100%;
+  padding: 5%;
 }

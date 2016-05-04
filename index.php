@@ -516,6 +516,7 @@ $('div.coachtext a').balloon();
           </a>
           </li>
           <li class="">
+            <div class="fb-page" data-href="https://www.facebook.com/StarsSmileyZhuShiHuiShe" data-tabs="timeline" data-width="270" data-height="130" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/StarsSmileyZhuShiHuiShe"><a href="https://www.facebook.com/StarsSmileyZhuShiHuiShe">Stars Smiley 株式会社</a></blockquote></div></div>
           </li>
         </ul>
 
@@ -543,6 +544,13 @@ $('div.coachtext a').balloon();
   <!--/FOOTER-->
 
 
-
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.6";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>

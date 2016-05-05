@@ -226,8 +226,6 @@ div#header > nav > ul > li.otoiawase{
   background-color: #fff;
   border: 1px solid #000;
   color: #000;
-  /*margin-top: 2rem;
-  margin-bottom: 2rem;*/
 }
 
 div#header > nav > ul > li.telban{
@@ -515,7 +513,7 @@ div#classu > ul > li > div.title > a > span{
 
 div#classu > ul > li > div.title > a > span > img{
   width: 100%;
-  vertical-align: bottom;;
+  vertical-align: bottom;
 }
 div#classu > ul > li > p{
   margin: 3% auto;
@@ -527,6 +525,10 @@ div#classu > ul > li > div.title > a > span.classlogo{
   line-height: 6rem;
   vertical-align: bottom;
   opacity: 0.5;
+}
+
+div#classu > ul > li > div.title > a:hover > span.classlogo{
+  opacity: 0.2;
 }
 
 div#classu > ul > li > div.title > a > span.mama{
@@ -966,23 +968,49 @@ footer > nav > p{
 div.mainphoto{
   width: 100%;
   height: 40rem;
-  background-image: url(images/topmain1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+}
+div.imgcate{
+    background-image: url(images/postimg2.jpg);
+}
+div.imgsingle{
+    background-image: url(images/postimg3.jpg);
 }
 div.postwrapper{
 padding-top: 10rem;
 display: flex;
 }
-@media screen and (min-device-width: 481px) {
+div.entry_main{
+  margin-bottom: 6%;
+}
+div.entry > p.state{
+  margin-bottom: 6%;
+}
+/*author関連*/
+div.saboxplugin-wrap{
+  border-top: 1px solid #e7ebed;
+  padding: 5%;
+  margin-top: 20%;
+}
+div.saboxplugin-gravatar{
+  width: 20%;
+}
+div.saboxplugin-gravatar img{
+  width: 100%;
+}
+div.saboxplugin-wrap div.vcard{
+  width: 100%;
+}
+@media screen and (min-device-width: 980px) {
   body > div.postwrapper{
     background-color: #fff;
-    width: 68%;
+    width: 980px;
     margin: 0 auto;
 
   }
 }
-@media screen and (max-device-width: 480px) {
+@media screen and (max-device-width: 979px) {
   div.postwrapper{
     width: 90%;
     margin: 0 auto;
@@ -991,15 +1019,38 @@ display: flex;
 }
 
 div.post-contents{
-  width: 70%;
-}
-div.right-sidebar{
-  width: 30%;
+  width: 60%;
+  margin-right: 8%;
+
 }
 
+div.post-contents a{
+  color:#333333;
+  text-decoration: none;
+}
+div.post-contents a:hover{
+  text-decoration: underline;
+}
+div.post-contents ul.postype li img{
+  width: 100%!important;
+  height: auto!important;
+}
 /*サイドバー*/
+div.right-sidebar{
+  width: 270px;
+}
+div.right-sidebar form{
+  font-weight: 500;
+  color:#333333;
+}
+div.right-sidebar div.sidebar-contents-wrap{
+  margin-top: 15%;
+}
 div.right-sidebar input#searchsubmit{
   font-size: 0.5rem;
+}
+div.widget_search{
+  margin-bottom: 10%;
 }
 div.right-sidebar li a{
   color: #333333;
@@ -1018,8 +1069,111 @@ div.right-sidebar h2.widgettitle{
   height: 4rem;
   line-height: 4rem;
 }
+
+div.widget_tag_cloud h2{
+visibility: hidden;
+}
+div.right-sidebar ul.sidebar-pickup > li{
+  border: 1px solid #e7ebed;
+  margin-bottom: 4%;
+padding-bottom: 2%;
+}
+div.right-sidebar ul.sidebar-pickup > li > div.pickup-thum{
+  width: 96%!important;
+  height: 100px!important;
+  overflow: hidden;
+
+}
+div.right-sidebar ul.sidebar-pickup > li > div.pickup-thum img{
+  width: 100%!important;
+  height: auto!important;
+}
+div.right-sidebar ul.sidebar-pickup > li > div.pickup-content{
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  font-weight: 200;
+}
 /*カテゴリーページ*/
-ul.category li{
+ul.category > li{
+  margin-bottom: 15%;
+}
+div.cate-thumbox{
   width: 100%;
-  padding: 5%;
+}
+div.post-contents h2{
+  font-size: 1.8rem;
+  margin-bottom: 10%;
+}
+div.post-contents ul.category li h3{
+  font-size: 1.3rem;
+  margin-bottom: 2%;
+}
+div.cate-thumbox > a > img{
+  width: 100%;
+  height: auto;
+  opacity: 1;
+}
+div.cate-thumbox > a:hover > img{
+  opacity: 0.6;
+}
+/*ペジネーションーカテゴリーページ*/
+ul#pagination{
+  font-weight: 500;
+  margin-top: 10%;
+}
+#prevli{
+  float: left;
+}
+#nextli{
+  float: right;
+}
+/*ペジネーションシングルページ*/
+ul#pagination > li#prev_next{
+  display: flex;
+}
+
+ul#pagination > li#prev_next > a{
+  display: block;
+  width: 43.5%;
+  border: 1px solid #e7ebed;
+  padding: 2.5%;
+}
+ul#pagination > li#prev_next > a:first-child{
+  margin-right: 3%;
+}
+ul#pagination > li#prev_next > a > div#next_title{
+  float: right;
+}
+ul#pagination > li#prev_next > a.clearfix > div{
+    margin-bottom: 5%;
+}
+ul#pagination > li#prev_next li.pagi-thumbox{
+  width: 40%!important;
+  height: 40%!important;
+  overflow: hidden!important;
+}
+ul#pagination > li#prev_next ul.prevnext li.pagi-thumbox > img{
+  width: 100%!important;
+  height: auto!important;
+}
+ul#pagination > li#prev_next ul.prevnext{
+  display: flex;
+  clear: both;
+}
+ul#pagination > li#prev_next ul.prevnext > li{
+  font-weight: 200;
+  font-size: 1.3rem;
+  overflow: hidden;
+}
+
+ul#pagination > li#prev_next ul.prevnext > li.pagi-title{
+  padding: 3%;
+}
+
+
+
+
+/*記事ページカスタマイズcss*/
+ol li{
+  list-style: lower-greek;
 }

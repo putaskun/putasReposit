@@ -18,9 +18,7 @@ $('div.coachtext a').balloon();
 </ul>
 
 
-<div class="scrolldown">
-  <span>scroll down</span>
-</div>
+
 
 
 <div class="wrapper bgwhite">
@@ -479,7 +477,7 @@ $('div.coachtext a').balloon();
 		<div class="news">
 			<h2><p><img src="<?php echo get_template_directory_uri(); ?>/images/pom_cream.png"></p><p>最新情報・会社概要・採用・SNS・プライバシーポリシー<br><span>NEWS</span></p></h2>
 
-        <ul class="flex clearfix bg">
+        <ul class="post flex clearfix bg">
           <?php
           $newsan = array(
                'post_type' => 'post', // 投稿タイプを指定
@@ -504,7 +502,7 @@ $('div.coachtext a').balloon();
 
         <ul class="sns">
           <li class="bgYellow omoshikomi">
-            <a href="">
+            <a href="http://localhost:8888/wordpress/otoiawase/">
             <p class="bgimgO"><img src="<?php echo get_template_directory_uri(); ?>/images/omoshikomi.png"></p>
             <p>お申込み</p>
           </a>
@@ -516,7 +514,9 @@ $('div.coachtext a').balloon();
           </a>
           </li>
           <li class="">
-            <div class="fb-page" data-href="https://www.facebook.com/StarsSmileyZhuShiHuiShe" data-tabs="timeline" data-width="270" data-height="130" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/StarsSmileyZhuShiHuiShe"><a href="https://www.facebook.com/StarsSmileyZhuShiHuiShe">Stars Smiley 株式会社</a></blockquote></div></div>
+            <div id="pageplugin">
+<div class="fb-page" data-href="https://www.facebook.com/StarsSmileyZhuShiHuiShe" data-tabs="timeline" data-width="500px" data-height="160px" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/StarsSmileyZhuShiHuiShe"><a href="https://www.facebook.com/StarsSmileyZhuShiHuiShe">Stars Smiley 株式会社</a></blockquote></div></div>              </div>
+            </div>
           </li>
         </ul>
 
@@ -530,27 +530,16 @@ $('div.coachtext a').balloon();
 
 </div>
 
-  <!--FOOTER-->
-<footer>
-  <nav class="wrapper">
-    <ul>
-      <li><a href="">会社概要</a></li>
-      <li><a href="">個人情報・プライバシーポリシー</a></li>
-    </ul>
-    <p>© 2016 STARS SMILEY.</p>
-  </nav>
 
-</footer>
-  <!--/FOOTER-->
+<?php get_footer(); ?>
 
-
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.6";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>

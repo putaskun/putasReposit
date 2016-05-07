@@ -99,7 +99,7 @@
 	            <span></span>
 	        </p>
 	        <nav role='navigation'>
-	            <ul role='navigation'>
+	            <ul>
 	              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#uchabout">グローバルチアについて</a></li>
 	              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#classu">クラス紹介</a></li>
 	              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#coach">コーチ</a></li>

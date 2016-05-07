@@ -4,12 +4,14 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
+	<meta name="viewport" content="width=device-width" />
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
-	<link href="<?php echo get_stylesheet_uri(); ?>" rel="stylesheet" type="text/css">
+	<!--<link href="<?php echo get_stylesheet_uri(); ?>" rel="stylesheet" type="text/css">-->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link href="<?php echo get_template_directory_uri(); ?>/css/slide.css" rel="stylesheet" type="text/css">
-<!--	<link href="<?php echo get_template_directory_uri(); ?>/css/smh.css" rel="stylesheet" type="text/css">
-	<link href="<?php echo get_template_directory_uri(); ?>/css/pc.css" rel="stylesheet" type="text/css">-->
+	<link href="<?php echo get_template_directory_uri(); ?>/css/tblt.css" rel="stylesheet" type="text/css">
+<link href="<?php echo get_template_directory_uri(); ?>/css/smh.css" rel="stylesheet" type="text/css">
+	<link href="<?php echo get_template_directory_uri(); ?>/css/pc.css" rel="stylesheet" type="text/css">
 <link href="<?php echo get_template_directory_uri(); ?>/css/normalize.css" rel="stylesheet" type="text/css">
 	<!--	<link href="<?php echo get_template_directory_uri(); ?>/css/simplestyle.css" rel="stylesheet" type="text/css">-->
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -38,8 +40,8 @@
   </script>
 
 
-	<div id="header">
-		<nav>
+	<header>
+		<nav id="pc-tblt">
 			<ul class="clearfix">
 				<li class="menuTitle"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/toplogo.png" alt="starssmileytitleロゴ"></a></li>
 				<li class="menuAbout"><a href="<?php echo esc_url( home_url( '/' ) ); ?>#uchabout">グローバルチアについて</a></li>
@@ -47,12 +49,18 @@
 				<li class="menuCoach"><a href="<?php echo esc_url( home_url( '/' ) ); ?>#coach">コーチ</a></li>
 				<li class="menuFee"><a href="">料金</a></li>
 				<li class="menuVoice"><a href="<?php echo esc_url( home_url( '/' ) ); ?>#voice">お客様の声</a></li>
-				<li class="otoiawase"><a href=""><i class="fa fa-envelope"></i>お問い合わせ</a></li>
+				<li class="otoiawase"><a href="http://localhost:8888/wordpress/otoiawase/"><i class="fa fa-envelope"></i><span>お問い合わせ</span></a></li>
 				<li class="otoiawase telban"><a href=""><i class="fa fa-phone"></i>045-909-0081</a></li>
 			</ul>
 		</nav>
 
+		<nav id="smh">
+			<ul class="clearfix">
+				<li class="smhTitle"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/toplogo.png" alt="starssmileytitleロゴ"></a></li>
+				<li class="smhMenu"><i class="fa fa-2x fa-bars"></i></li>
+			</ul>
+		</nav>
 
 
-	</div>
+	</header>
 <!--END#header-->

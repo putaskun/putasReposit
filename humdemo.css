@@ -1,0 +1,151 @@
+
+
+/************ smh header ナビ開閉****************************/
+
+header#smh  {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    z-index:999999;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    user-select:none;
+}
+header#smh .inner {
+    position:relative;
+    width: 90%;
+    margin: 2% auto;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+header#smh > div.inner > h1{
+  width: 17%;
+  margin: 0;
+  padding: 0;
+}
+header#smh > div.inner > h1 > a > img{
+  width: 100%;
+  height: auto;
+}
+/* ナビゲーション */
+header#smh nav {
+        overflow:auto;
+        position: fixed;
+        top: 0;
+        right: -70%;
+        width: 70%;
+        max-width:320px;
+        height: 100%;
+        background: #fff;
+        opacity: 0;
+        z-index:999998;
+        overflow-y: scroll;
+}
+/* ナビゲーション：アクティブ時 */
+header#smh.navOpen nav {
+        opacity: 0.96;
+        right: 0;
+}
+header#smh nav ul {
+    border-top:1px solid #ccc;
+    overflow-y: scroll;
+}
+header#smh nav ul li {
+    border-bottom:1px solid #ccc;
+}
+header#smh nav ul li a {
+    position:relative;
+    display:block;
+    padding:1.5em;
+    color:#999;
+    text-decoration:none;
+}
+header#smh nav ul li a:hover {
+    background:#f2f2f2;
+}
+header#smh nav ul li a:before {
+  position: absolute;
+  top: 50%;
+  right: 1.5em;
+  display: inline-block;
+  content: "";
+  width: 7px;
+  height: 7px;
+  margin-top: -4px;
+  margin-right: -4px;
+  vertical-align: middle;
+    border-top: 3px solid #333333;
+  border-right: 3px solid #333333;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+}
+
+/* ナビゲーションアイコン */
+header#smh .navBtn {
+        display: block;
+        width: 30px;
+        position: absolute;
+        top: 15%;
+        right:0;
+        cursor: pointer;
+}
+header#smh .navBtn span {
+        display: block;
+        height: 4px;
+        width: 100%;
+        background: #333333;
+        border-radius: 2px;
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+}
+header#smh .navBtn span:nth-of-type(2),
+header#smh .navBtn span:nth-of-type(3) {
+        margin-top: 5px;
+}
+/* ナビゲーションアイコン：アクティブ */
+header#smh.navOpen .navBtn span:nth-of-type(1) {
+        -webkit-transform: translateY(9px) translateX(0) rotate(45deg);
+        -ms-transform: translateY(9px) translateX(0) rotate(45deg);
+        transform: translateY(9px) translateX(0) rotate(45deg);
+}
+header#smh.navOpen .navBtn span:nth-of-type(2) {
+        margin-top: 5px;
+        opacity: 0;
+        -webkit-transform: translateY(9px);
+        -ms-transform: translateY(9px);
+        transform: translateY(9px);
+}
+header#smh.navOpen .navBtn span:nth-of-type(3) {
+        -webkit-transform: translateY(-9px) translateX(0) rotate(-45deg);
+        -ms-transform: translateY(-9px) translateX(0) rotate(-45deg);
+        transform: translateY(-9px) translateX(0) rotate(-45deg);
+}
+
+div#smh #contents {
+    margin-top:80px;
+    padding:1em 1.5em;
+    line-height:1.5;
+}
+div#smh #contents p {
+    margin-bottom:1em;
+}
+/* オーバーレイ */
+.overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+        -ms-filter: "alpha(opacity=70)";
+        z-index: 999;
+}

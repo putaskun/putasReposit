@@ -9,11 +9,11 @@ $('div.coachtext a').balloon();
 </script>
 <!--/balloon_javascript-->
 
-
+<div id="contents">
 
 <ul class="cb-slideshow">
-		<li><span class="spImg">Image 01</span><div><h3><span><img src="<?php echo get_template_directory_uri(); ?>/images/wtoplogo.png" width="10%"></span><br>チアで世界に通用する力を手に入れる！<br><span class="spFont">GLOBAL CHEER LEEDING</span></h3></div></li>
-		<li><span class="spImg">Image 02</span><div><h3><span><img src="<?php echo get_template_directory_uri(); ?>/images/wtoplogo.png" width="10%"></span><br>チアで世界に通用する力を手に入れる！<br><span class="spFont">GLOBAL CHEER LEEDING</span></h3></div></li>
+		<li><span class="spImg">Image 01</span><div><h3>チアで世界に通用する力を手に入れる！<br><span class="spFont">GLOBAL CHEER LEEDING</span></h3></div></li>
+		<li><span class="spImg">Image 02</span><div><h3>チアで世界に通用する力を手に入れる！<br><span class="spFont">GLOBAL CHEER LEEDING</span></h3></div></li>
 		<li><span class="spImg">Image 03</span><div><h3>チアで世界に通用する力を手に入れる！<br><span class="spFont">GLOBAL CHEER LEEDING</span></h3></div></li>
 </ul>
 
@@ -462,8 +462,8 @@ $('div.coachtext a').balloon();
           横浜市青葉区美しが丘の住宅街に佇む一軒家の親子サロン。チアダンスをはじめとする各レッスンのほか、季節に合わせたイベントを行っています。世界の選りすぐりのおもちゃを毎月少しずつ買い揃え、お子様の学ぶ心も大切に。庭のある落ち着いたスタジオは、時間貸も承っておりますので随時お問合せ下さい。
         </a></div>
         </li>
-          <li>
-          <iframe src="http://localhost:8888/googlemap.html" width="100%"height="220px"frameborder="0" style="border:0" allowfullscreen></iframe>
+          <li class="ifrmsize">
+          <iframe src="<?php echo get_template_directory_uri(); ?>/map/googlemap.html" width="100%" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
           </li>
 
 			</ul>
@@ -526,9 +526,10 @@ $('div.coachtext a').balloon();
 <!--/NEWS SNS-->
 
 
-	<!-- / warpper-->
+	<!-- / warpper--></div>
 
 </div>
+<!-- /#contents-->
 
 
 <?php get_footer(); ?>

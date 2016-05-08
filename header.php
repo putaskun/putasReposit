@@ -42,11 +42,9 @@
     //画面の高さを取得して、変数wHに代入
     var wH = $(window).height();
         $("div.wrapper").css("paddingTop", wH );
+				$("div#uchabout").css("top", wH - 120 );
   });
   </script>
-
-
-
 
 
 
@@ -56,24 +54,20 @@
 	  $(document).ready(function(){
 	// オーバーレイ作成
 	$('#contents').prepend('<div class="overlay"></div>');
-
 	// アイコンをクリックしたら
 	$('.navBtn').click(function() {
 	$('header#smh').toggleClass('navOpen'); // class付与/削除
 	$('.overlay').toggle(); // オーバーレイ表示/非表示
-
 	  // スマホナビゲーションがヘッダーに被らないようにする
 	  var headerH = $('header#smh').outerHeight();
 	  if ($('header').hasClass('navOpen')) {
 	  $('header#smh nav').css('marginTop', headerH + 'px'); //ヘッダーの高さ分マージンを付ける
 	        }
 	});
-
 	// オーバーレイをクリックしたら
 	$('.overlay').click(function() {
 	        $(this).fadeOut(300); // オーバーレイ非表示
 	       $('header#smh').removeClass('navOpen'); // class削除
-
 	});
 	  });
 	</script>
@@ -105,8 +99,9 @@
 	              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#coach">コーチ</a></li>
 	              <li><a href="">料金</a></li>
 	              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#voice">お客様の声</a></li>
-	              <li><a href="http://localhost:8888/wordpress/otoiawase/"><i class="fa fa-envelope"></i><span>お問い合わせ</span></a></li>
+	              <li><a href="http://dp18311054.lolipop.jp/wordpress/otoiawase/"><i class="fa fa-envelope"></i><span>お問い合わせ</span></a></li>
 	              <li><a href=""><i class="fa fa-phone"></i>045-909-0081</a></li>
+							</ul>
 	        </nav>
 	    <!-- /.inner --></div>
 	</header>
@@ -122,7 +117,7 @@
 				<li class="menuCoach"><a href="<?php echo esc_url( home_url( '/' ) ); ?>#coach">コーチ</a></li>
 				<li class="menuFee"><a href="">料金</a></li>
 				<li class="menuVoice"><a href="<?php echo esc_url( home_url( '/' ) ); ?>#voice">お客様の声</a></li>
-				<li class="otoiawase"><a href="http://localhost:8888/wordpress/otoiawase/"><i class="fa fa-envelope"></i><span>お問い合わせ</span></a></li>
+				<li class="otoiawase"><a href="http://dp18311054.lolipop.jp/wordpress/otoiawase/"><i class="fa fa-envelope"></i><span>お問い合わせ</span></a></li>
 				<li class="otoiawase telban"><a href=""><i class="fa fa-phone"></i>045-909-0081</a></li>
 			</ul>
 		</nav>

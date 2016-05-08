@@ -16,6 +16,22 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   vertical-align: baseline;
   background: transparent;
 }
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header,
+hgroup, menu, nav, section,
+time, mark, audio, video {
+        -webkit-transition: 0.3s ease-in-out;
+        -moz-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+}
 
 body {
   line-height: 1;
@@ -36,7 +52,8 @@ li{
 }
 html,body{
   width: 100%;
-  overflow-x: hidden;
+  height: 100%;
+  /*overflow-x: hidden;*/
 
 }
 th{
@@ -51,6 +68,36 @@ th{
 }
 
 
+.loadingWrap{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+  z-index: 99999999999999;
+}
+.loadingWrap > p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -4%;
+  margin-left: -4%;
+  width: 8%;
+}
+.loadingWrap > p > img{
+  width: 100%;
+  height: auto;
+}
+
+div#uchabout{
+  position: absolute;
+}
+@media screen and (min-width: 1820px) {
+  div#uchabout{
+    margin-top: -0.3%;
+  }
+}
 div.title > a{
   color: #333333;
   text-decoration: none;
@@ -65,52 +112,8 @@ div.navigation{
 }
 
 
-/*記事ページcss*/
-.ribon{
-  background-image: url();
-}
-.flex{
-}
-.flex > div.post{
-  float: left;
-width: 30%;
-margin:auto;
-}
-
-.flex > div.post:nth-child(-n+2){
-margin-right: 5%;
-}
-
-body,div#header{
-  font-size: 1.4rem;
-  line-height: 1.8rem;
-  letter-spacing: 0.05rem;
-  width:100%
-  margin:0;
-  overflow-x: hidden;
-}
-@media screen and (min-device-width: 980px) {
-  .wrapper{
-    width: 980px;
-    margin: 0 auto;
-  }
-  .bgwhite{
-    background-color: #fff;
-  }
-}
-@media screen and (max-device-width: 979px) {
-  .wrapper{
-    width: 90%;
-    margin: 0 auto;
-  }
-  .bgwhite{
-    background-color: #fff;
-  }
-}
-
-
-i.fa-star{
-  color: #878787;
+.bgwhite{
+  background-color: #fff;
 }
 
 
@@ -134,835 +137,71 @@ p.moreB > a{
 p.moreB > a:hover{
   background-color: #AFAFAF;
 }
-/*header*/
 
-body > div#header{
-margin-top: 0;
-width: 100%;
-height:17%;
-background-image: url(images/topnav_wave.png);
-background-size: 100%;
-background-repeat: repeat-x;
-z-index: 99999!important;
-position: fixed;
-top:0;
-opacity: 0.9;
+
+
+
+
+
+
+
+/*記事ページカスタマイズcss*/
+ol li{
+  list-style: lower-greek;
 }
 
-div#header > nav{
-  width: 100%;
-  margin: 0 auto;
-  opacity: 1;
-  position: relative;
+.ribon{
+  background-image: url();
 }
 
-
-div#header > nav > ul {
-  display: flex;
-  clear: both;
-  width: 88%;
-  height: 6rem;
-  margin: 1% auto;
-}
-div#header > nav > ul > li{
-  text-align: center;
-height: 6rem;
-line-height:6rem;
-vertical-align: middle;
-}
-div#header > nav > ul > li > a{
-  color: #333333;
-  text-decoration: none;
-}
-div#header > nav > ul > li > a:hover{
-  text-decoration: underline;
-}
-div#header > nav > ul > li.menuTitle{
-  width:10%;
-  margin-left: 1%;
-
-}
-div#header > nav > ul > li.menuAbout {
-  margin-left: 5%;
-
-  vertical-align: middle;
-  width:25%;
-}
-div#header > nav > ul > li.menuClass {
-  width:12%;
-
-  vertical-align: middle;
-  margin-left: 2%;
-}
-
-div#header > nav > ul > li.menuCoach {
-  width:7%;
-
-  vertical-align: middle;
-  margin-left: 3%;
-}
-div#header > nav > ul > li.menuFee {
-  width:6%;
-
-  vertical-align: middle;
-  margin-left: 2%;
-}
-div#header > nav > ul > li.menuVoice {
-  width:12%;
-
-
-  margin-left: 3%;
-}
-
-div#header > nav > ul > li.otoiawase{
-  width:18%;
-  margin-top: 0.5%;
-  margin-left: 6%;
-  text-align: center;
-  vertical-align: middle;
-  height: 4.5rem;
-  line-height: 4.5rem;
-  border-radius: 16px;
-  background-color: #fff;
-  border: 1px solid #000;
-  color: #000;
-}
-
-div#header > nav > ul > li.telban{
-  margin-left: 1%;
-}
-
-div#header > nav > ul > li.menuTitle > a > img{
-  width: 100%;
+i.fa-star{
+  color: #878787;
 }
 
 
-div.scrolldown{
-  position: fixed;
-  top:94%;
-  left: 46%;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  height: 2rem;
-  width:10rem;
-  font-weight: 800;
-  text-align: center;
-  color: #fff;
-}
-
-div.wrapper > div{
-margin-top: 10rem;
-z-index: 333333;
+/*固定ページ-contact-form*/
+div.contact-form{
 width: 100%;
 }
-
-div.wrapper div h2 p{
-  text-align: center;
-  margin: 2rem auto;
-  font-weight: bold;
-}
-div.wrapper >div > h2{
-  position: relative;
-}
-div.wrapper > div > h2 > p > img{
-  width: 4.5%;
-}
-div.wrapper > div > h2 > p{
-  font-family:"Avenir","Montserrat";
-  letter-spacing: 0.3rem;
-  margin-bottom: 0.5%;
-}
-
-div.wrapper > div > h2 > p.subtitle{
-  position: relative;
-  z-index: 99999;
-}
-div.wrapper > div > h2 > p{
-  font-size: 1.7rem;
-}
-
-div.wrapper > div > h2 > p > span{
-  font-size: 1.5rem;
-}
-.descript{
-  background-color: #fff;
-  text-align: left;
-  font-size: 1.6rem!important;
-  line-height: 2.3rem;
-}
-/*-
-グローバルチアについてABOUT--------------------------------------------------------------------------*/
-div#uchabout{
-position: absolute;
-top:80%;
-}
-div.wrapper > div#about{
-margin-top: 8rem;
-background-image: url(images/worldmap.png);
-background-repeat: no-repeat;
-background-size: 100%;
-background-size: contain;
-opacity: 0.9;
-}
-
-div#about > ul{
-  width: 83%;
-  margin: 5rem auto;
-}
-
-div#about > ul > li{
-  position: relative;
-  float: left;
-  background-image: url(images/pom.png);
-  background-repeat: no-repeat;
-  background: contain;
-  background-size: 100% auto;
-  width: 23%;
-  padding-top: 23%;
-}
-div#about > ul > li:nth-child(-n+2){
-  margin-right: 15%;
-}
-div#about > ul > li > span{
-  font-size: 1.6rem;
-  font-weight: 500;
-  position: absolute;
-  text-align: center;
-  top:37%;
-}
-div#about > ul > li > span.kiso{
-  left:36%;
-}
-div#about > ul > li > span.hyogen{
-  left:40%;
-}
-div#about > ul > li > span.houshi{
-  left:32%;
-}
-div#about > p.descript{
-  width: 83%;
-  margin: 0 auto;
-}
-/*-
-7つのこと--------------------------------------------------------------------------*/
-div.about7{
-  margin-top: 10rem;
-  text-align: center;
-}
-div.about7 > p.about7P{
-  text-align: center;
-  font-size: 1.6rem;
-}
-
-div.about7 > ul{
-  position: relative;
-  width: 75%;
-  margin: 5% auto;
-  margin-left: 6.5%;
-}
-div.about7 > ul > li{
-  width: 100%;
-  font-size: 1.2rem;
-  margin-top: 5%;
-  vertical-align: middle;
-  padding: 1.5% 8%;
-}
-div.about7 > ul > li > div{
-  margin-top: 2rem;
-  position: relative;
-  width: 32%;
-  height: 32%;
-  text-align: center;
-  font-size: 1.6rem;
-}
-div.about7 > ul > li > div > span.oya{
-z-index: 10;
-position: relative;
-font-size: 2rem;
-font-weight: bold;
-letter-spacing: 0.4rem;
-}
-div.about7 > ul > li > div > span.oya > span.textbig{
-font-size: 5rem;
-
-}
-/*----円形photoサイズ等指定-----------*/
-div.about7 > ul > li > p,div.about7 > ul > li > div > p.circlephoto{
-  width: 100%;
-  margin-top: 4%;
-}
-div.about7 > ul > li > p,div.about7 > ul > li > div > p.circlephoto > img{
+div.contact-form ul{
   width: 100%;
 }
-/*----タイトル背景ポムサイズ等指定-----------*/
-div.about7 > ul > li > div{
-  position: relative;
-}
-div.about7 > ul > li > div > div.imgpom{
-  width: 40px;
-  height: 40px;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  position: absolute;
-  top:-3%;
-  left: 38%;
-  z-index: 3;
-}
-div.about7 > ul > li > p.ptext{
-  margin-top: 20%;
-  width: 50%;
-  height: auto;
-  font-size: 1.6rem;
-  line-height: 2.5rem;
-  text-align: left;
-}
-/*奇数------------------------------------------------*/
-div.about7 > ul > li:nth-of-type(odd) > p.ptext{
-    float: right;
-}
-div.about7 > ul > li:nth-of-type(odd) > div{
-  float: left;
-}
-/*偶数-----------------------------------------------*/
-div.about7 > ul > li:nth-of-type(even) > p.ptext{
-    float:left;
-}
-div.about7 > ul > li:nth-of-type(even) > div{
-  float: right;
-}
-/*説明文背景色-----------------------------------------------*/
-div.about7 > ul > li:nth-child(-n+7){
-    background-color: #F9F9F9;
-    border-radius: 100px;
+
+div.contact-form ul li > span.red{
+  color: red;
 }
 
-
-
-/*以下各項目設定---------------------------------------*/
-div.about7 > ul > li > div.reigi  div.imgpom{
-  background-image: url(images/pom_yellow.png);
+div.contact-form ul li > p:first-child{
+  margin-bottom: 0;
+  padding-bottom:0;
 }
-
-div.about7 > ul > li > div.sekkyokusei  div.imgpom{
-  background-image: url(images/pom_violet.png);
-}
-
-div.about7 > ul > li > div.kyouchosei  div.imgpom{
-  background-image: url(images/pom_blue.png);
-}
-
-div.about7 > ul > li > div.syucyuryoku  div.imgpom{
-  background-image: url(images/pom_yellow.png);
-}
-
-div.about7 > ul > li > div.hyogenryoku  div.imgpom{
-  background-image: url(images/pom_blue.png);
-}
-div.about7 > ul > li > div.hyogenryoku > span.oya > span.presnttext{
-  font-size: 1.3rem;
-  letter-spacing: normal;
-}
-
-div.about7 > ul > li > div.taseikan  div.imgpom{
-  background-image: url(images/pom_pink.png);
-}
-
-div.about7 > ul > li > div.volunteer  div.imgpom{
-  background-image: url(images/pom_yellow.png);
-}
-
-
-
-
-
-
-
-/*-
-クラスのご紹介CLASS--------------------------------------------------------------------------*/
-div#classu{
-  padding-top: 10%;
-}
-div#classu > ul{
-  display: flex;
-  padding-left: 0;
-  width: 100%;
-
-}
-div#classu > p{
-  text-align: center;
-  margin-top: 2%;
-  margin-bottom: 5%;
-}
-div#classu > ul > li{
-  border: 1px solid #eee;
-  width: 48%;
-  margin-bottom: 5%;
-  position: relative;
-}
-div#classu > ul > li:last-child{
-  margin-left: 5%;
-}
-div#classu > ul > li > div.title{
-  margin-left: 4.6%;
-  margin-top: 2%;
-}
-div#classu > ul > li > div.title > a > span{
-  padding-left: 2%;
-  padding-right: 2%;
-}
-
-div#classu > ul > li > div.title > a > span > img{
-  width: 100%;
-  vertical-align: bottom;
-}
-div#classu > ul > li > p{
-  margin: 3% auto;
-  width: 90%;
-}
-div#classu > ul > li > div.title > a > span.classlogo{
-  display: inline-block;
-  width: 12%;
-  line-height: 6rem;
-  vertical-align: bottom;
-  opacity: 0.5;
-}
-
-div#classu > ul > li > div.title > a:hover > span.classlogo{
-  opacity: 0.2;
-}
-
-div#classu > ul > li > div.title > a > span.mama{
-  width:7%;
-}
-div#classu > ul > li > div.title > a > span.baby{
-  width:9%;
-}
-div#classu > ul > li > div.title > a > span.maintitle{
-  font-weight: 600;
-}
-div#classu > ul > li > div.title > a > span.subtitle{
-  width: 50%;
-  font-size: 1.2rem;
-  font-weight: 500;
+div.contact-form ul li .post1{
+  width: 40%;
   margin-left: 0;
 }
-
-div#classu > ul > li > div.classthumbnail{
-  width: 90%;
-  margin-top: 4%;
-  margin-left: 4.8%;
-  margin-bottom: 3%;
+div.contact-form ul li .post2{
+  width: 52%;
 }
 
-div#classu > ul > li > div.classthumbnail a > img{
-  width: 100%!important;
-  height: auto!important;
-  opacity: 1;
-}
-div#classu > ul > li > div.classthumbnail a:hover > img{
-  width: 100%!important;
-  height: auto!important;
-  opacity: 0.6;
-}
-div#classu > ul > li > div.classdescript{
-  margin: 4.6%;
-}
-div#classu > ul > li > div.classdescript > a > p{
-  margin: 4%;
-  font-weight: 500;
-  position: relative;
-}
-div#classu > ul > li > div.classdescript > a{
-  color: #333333;
-  text-decoration: none;
-}
-div#classu > ul > li > div.classdescript a:hover{
-  text-decoration: underline;
-}
-div#classu > ul > li > div.classdescript a:hover > p > span{
-  text-decoration: underline;
-}
-div#classu a:hover{
-  text-decoration: underline;
-}
-div#classu > ul > li > div.classdescript > a > p > span{
-  display: inline-block;
-  width: 96%;
-  position: relative;
-  left: 4.5%;
-}
-div#classu > ul > li > div.classdescript > a > p > img{
-  width: 4%;
-  position: absolute;
-  top:2%;
-  display: inline-block;
-}
-p.classbtn{
-  position: absolute;
-  bottom:0.2%;
-  left: 5.6%;
-}
-/*-
-キャンペーンcampaign-------------------------------------------------------------------------*/
-div.campaign > ul{
-  display: flex;
+div.page-contents > h1.page-title{
   width: 100%;
-  margin: 7% auto;
-  padding-left: 0;
-}
-div.campaign > ul > li{
-  width: 420px;
-
-}
-div.campaign > ul > li:nth-child(-n+1){
-  margin-right: 14.2%;
-}
-div.campaign > ul > li > div.campaign-postcontent{
-width: 100%;
-margin: auto;
-padding: 2%;
-}
-div.campaign > ul > li > div.campaign-postcontent > a{
-color: #333333;
-text-decoration: none;
-}
-div.campaign > ul > li > div.campaign-postcontent > a:hover{
-text-decoration: underline;
-}
-div.campaign > ul > li > p > img{
-  width: 100%;
-}
-div.campaign > ul > li > div.campaign-post{
-  margin: auto;
-  width: 420px;
-  height: 220px;
-  overflow: hidden;
-}
-div.campaign > ul > li > div.campaign-post > a > img{
-width: 100%!important;
-height: auto!important;
-opacity:1;
-}
-div.campaign > ul > li > div.campaign-post > a:hover > img{
-opacity:0.6;
-}
-/*-
-お客様の声voice-------------------------------------------------------------------------*/
-div#voice{
-  padding-top: 10%;
-}
-div#voice > ul{
-  display: flex;
-  padding-top: 8%;
-}
-div#voice > ul > li{
-  width: 28%;
-  position: relative;
-}
-div#voice > ul > li:nth-child(-n+2){
-  margin-right: 7%;
-}
-div#voice > ul > li > p{
-  width: 80%;
-  margin: 0 auto;
-  font-size: 1.5rem;
-  line-height: 2.3rem;
-}
-div#voice > ul > li span img{
-  width: 100%;
-}
-div#voice > ul > li > p > img{
-  width: 100%;
-}
-div#voice > ul > li > span.comme{
-  position: absolute;
-  top:-3%;
-  width: 94%;
-  left:3%;
-}
-div#voice > ul > li > span.commeText{
-  position: absolute;
-  top:-6%;
-  left:8%;
-  z-index: 88888;
-  font-size: 1.5rem;
-  font-weight: 400;
-  padding: 4%;
-}
-p.commedscrpt{
-text-align: center;
-font-weight: 400;
-padding-bottom: 2%;
-}
-
-/*-
-FAQ-------------------------------------------------------------------------*/
-div.faq > ul{
-  display: flex;
-  padding-left: 0;
-}
-div.faq > ul > li{
-  width: 30%;
-}
-div.faq > ul > li:nth-child(-n+2){
-  margin-right: 5%;
-}
-div.faq > ul > li > div{
-  border: 1px solid #333333;
-  padding: 6%;
-  line-height: 2.2rem;
-  margin-top: 15%;
-}
-/*-
-STAFF------------------------------------------------------------------------*/
-div#coach{
-  padding-top: 10%;
-}
-div#coach > ul{
-  width: 100%;
-  display: flex;
-}
-div#coach > ul > li{
-  width: 30%;
-  position: relative;
-}
-div#coach > ul > li:nth-child(-n+2){
-  margin-right: 5%;
-}
-div#coach > ul > li > div{
-  position: relative;
-width: 100%;
-}
-div#coach > ul > li > div > a > span.murata{
-  width: 100%;
-  padding-top: 100%;
-  background-image: url(images/coach1.jpg);
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-size: 100%;
-  background-position: 0% 0%;
-}
-div#coach > ul > li > div > a > span.shikima{
-  width: 100%;
-  padding-top: 100%;
-  background-image: url(images/coach2.jpg);
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-size: 100%;
-  background-position: 0% 0%;
-}
-div#coach > ul > li > div > a > span.usuda{
-  width: 100%;
-  padding-top: 100%;
-  background-image: url(images/coach3.jpg);
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-size: 100%;
-  background-position: 0% 0%;
-}
-div#coach > ul > li > div > a > span{
-  font-size: 1.6rem;
-  text-align: center;
-  position: absolute;
-}
-div#coach > ul > li > div > a > span > span.spnTop{
-  position: absolute;
-  top:60%;
-  left: 35%;
-  background-color: #fff;
-  color: #000;
-}
-div#coach > ul > li > div > a > span > span.spnUndr{
-  position: absolute;
-  top:70%;
-  left: 15%;
-  background-color: #fff;
-  color: #000;
-}
-div#coach > ul > li > div.Ans{
-  width: 100%;
-  height: 100%;
-    font-size: 1.2rem;
-
-  margin-top: 90%;
-
-}
-div#coach div.coachtext a{
-  color: #000;
-  text-decoration: none;
-    font-size: 1.1rem;
-}
-div#coach div.coachtext > a[title^="日本"]{
-
-
-}
-/*-
-smileyHouse------------------------------------------------------------------------*/
-div.smileyHouse > h2{
+  font-size: 1.9rem;
+  line-height:3rem;
   margin-bottom: 5%;
 }
-div.smileyHouse > ul{
-  display: flex;
+/*固定ページ（お問い合わせ）入力間違い時のcss*/
+div.screen-reader-response{
+  display: none;
 }
-div.smileyHouse > ul > li{
-  width: 50%;
+span.wpcf7-not-valid-tip[role="alert"]{
+  color: red;
+  padding-left: 5%;
 }
-div.smileyHouse > ul > li > div.textPdding{
-  padding: 5%;
-  line-height:2.5rem;
+div.wpcf7-validation-errors[role="alert"]{
+  color: red;
 }
-div.smileyHouse > ul > li > div.textPdding{
-  font-size: 1.3rem;
-}
-div.smileyHouse > ul > li > div.textPdding > table{
-  width: 100%;
-  margin-top: 5%;
-  margin-left: 2%;
-  border-collapse:collapse;
-}
-div.smileyHouse > ul > li > div.textPdding > table  th,div.smileyHouse > ul > li > div.textPdding > table  td{
-    padding-left: 5%;
-    padding-right: 3%;
-    padding-bottom: 2%;
-}
-div.smileyHouse > ul > li > div.textPdding > table td > a{
-  color: #333333;
-  text-decoration: none;
-}
-div.smileyHouse > ul > li > div.textPdding > table td > a:hover{
-  text-decoration: underline;
-}
-div.smileyHouse > ul > li > div.textPdding > a{
-  color: #333333;
-  text-decoration: none;
-}
-div.smileyHouse > ul > li > div.textPdding > a:hover{
-  text-decoration: underline;
-}
-div.smileyHouse a:hover{
-  text-decoration: underline;
-}
-div.smileyHouse > ul > li > a > img{
-  width: 100%;
-  opacity: 1;
-}
-div.smileyHouse > ul > li > a:hover > img{
-  opacity: 0.6;
-}
-  /*-
-NEWS SNS------------------------------------------------------------------------*/
-div.news > ul{
-  display: flex;
-  width: 100%;
-  margin-top: 5%;
-}
-
-div.news > ul > li:nth-child(-n+2){
-  margin-right: 8.74%;
-}
-div.news > ul > li{
-  width: 270px;
-}
-div.news > ul > li > p{
-  width: 100%;
-}
-
-div.news ul.blog_info > li{
-  float: left;
-}
-div.news ul > li a{
-  color: #333333;
-  text-decoration: none;
-}
-div.news ul > li a:hover{
-  text-decoration: underline;
-}
-div.post{
-  border: 1px solid #eee;
-  width: 45%;}
-div.flex:nth-child(2n){
-}
-div.news .thumbox{
-  height:130px!important;
-  width:270px!important;
-  overflow: hidden;
-}
-div.news .thumbox > a > img{
-  width:100%!important;
-  height: auto!important;
-  opacity: 1;
-}
-div.news .thumbox > a:hover > img{
-opacity: 0.6;
-}
-div.news ul.sns li{
-  width: 270px;
-  height: 130px;
-}
-div.news ul.sns li.bgYellow{
-}
-div.news ul.sns li.bgYellow > a{
-  display: block;
-  width: 100%;
-  padding-top: 10%;
-  height: 100px;
-  background-color: #FFCC10;
-  color: #fff;
-  font-weight: 400;
-  text-decoration: none;
-}
-div.news ul.sns li.bgYellow > a:hover{
-  background-color: #FFE183;
-}
-div.news ul.sns li.bgYellow > a > p{
-  text-align: center;
-  margin:auto;
-  vertical-align: middle;
-}
-
-div.news ul.sns li.omoshikomi > a > p.bgimgO{
-  width:25%;
-
-  margin-bottom: 1%;
-}
-div.news ul.sns li.saiyo > a > p.bgimgS{
-  width:35%;
-
-
-}
-div.news ul.sns li.bgYellow > a > p > img{
-  width: 100%;
-}
-/*-
-Footer------------------------------------------------------------------------*/
-footer{
-  margin-top: 10%;
-  width: 100%;
-  height:200px;
-  background-image: url(images/footer.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-footer > nav{
-  padding-top: 7%;
-
-}
-footer > nav > ul{
-  font-weight: 400;
-  font-size: 1.4rem;
-  line-height: 2.6rem;
-}
-footer > nav > ul > li > a{
-  color:#333333;
-  text-decoration: none;
-}
-footer > nav > ul > li > a:hover{
-  color:#949494;
-  text-decoration: underline;
-}
-footer > nav > p{
-  font-size: 1.1rem;
-  text-align: center;
+span.contact-title{
+  font-weight: 500;
 }
 /********記事ページ**********************/
 div.mainphoto{
@@ -977,10 +216,7 @@ div.imgcate{
 div.imgsingle{
     background-image: url(images/postimg3.jpg);
 }
-div.postwrapper{
-padding-top: 10rem;
-display: flex;
-}
+
 div.entry_main{
   margin-bottom: 6%;
 }
@@ -1002,27 +238,7 @@ div.saboxplugin-gravatar img{
 div.saboxplugin-wrap div.vcard{
   width: 100%;
 }
-@media screen and (min-device-width: 980px) {
-  body > div.postwrapper{
-    background-color: #fff;
-    width: 980px;
-    margin: 0 auto;
 
-  }
-}
-@media screen and (max-device-width: 979px) {
-  div.postwrapper{
-    width: 90%;
-    margin: 0 auto;
-    background-color: #fff;
-  }
-}
-
-div.post-contents{
-  width: 60%;
-  margin-right: 8%;
-
-}
 
 div.post-contents a{
   color:#333333;
@@ -1036,9 +252,7 @@ div.post-contents ul.postype li img{
   height: auto!important;
 }
 /*サイドバー*/
-div.right-sidebar{
-  width: 270px;
-}
+
 div.right-sidebar form{
   font-weight: 500;
   color:#333333;
@@ -1169,11 +383,4 @@ ul#pagination > li#prev_next ul.prevnext > li{
 ul#pagination > li#prev_next ul.prevnext > li.pagi-title{
   padding: 3%;
 }
-
-
-
-
-/*記事ページカスタマイズcss*/
-ol li{
-  list-style: lower-greek;
-}
+/*}*/

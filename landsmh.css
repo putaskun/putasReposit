@@ -13,7 +13,11 @@
       background-color: #fff;
   }
 
-
+  .loadingWrap > p {
+    margin-top: -6%;
+    margin-left: -6%;
+    width:12%;
+  }
 
 
 /*記事ページcss*/
@@ -90,10 +94,7 @@ div.wrapper > div > h2 > p > span{
 }
 /*-
 グローバルチアについてABOUT--------------------------------------------------------------------------*/
-div#uchabout{
-position: absolute;
-top:60%;
-}
+
 div.wrapper > div#about{
 margin-top: 8rem;
 background-image: url(../images/worldmap.png);
@@ -281,7 +282,7 @@ div.about7 > ul > li > div.volunteer  div.imgpom{
 /*-
 クラスのご紹介CLASS--------------------------------------------------------------------------*/
 div#classu{
-  padding-top: 20%;
+  padding-top: 10%;
 }
 div#classu > ul{
   padding-left: 0;
@@ -428,7 +429,7 @@ line-height: 1.8rem;
 }
 div.campaign > ul > li > div.campaign-postcontent > a{
 color: #333333;
-text-decoration: none;
+text-decoration: underline;
 }
 div.campaign > ul > li > div.campaign-postcontent > a:hover{
 text-decoration: underline;
@@ -452,7 +453,7 @@ opacity:0.6;
 /*-
 お客様の声voice-------------------------------------------------------------------------*/
 div#voice{
-  padding-top: 20%;
+  padding-top: 10%;
 }
 div#voice > ul{
   display: flex;
@@ -522,7 +523,7 @@ div.faq > ul > li > div{
 /*-
 STAFF------------------------------------------------------------------------*/
 div#coach{
-  padding-top: 20%;
+  padding-top: 10%;
 }
 div#coach > ul{
   width: 100%;
@@ -692,6 +693,7 @@ position: relative;
   height: 100%;
   margin-bottom: 10%;
   font-size: 1.4rem;
+  background-color: #f9f9f9;
 }
 
 
@@ -716,7 +718,7 @@ div.news ul.blog_info > li{
 }
 div.news ul > li a{
   color: #333333;
-  text-decoration: none;
+  text-decoration: underline;
 }
 div.news ul > li a:hover{
   text-decoration: underline;
@@ -803,7 +805,7 @@ div.news div#pageplugin > div.fb-page{
 Footer------------------------------------------------------------------------*/
 footer{
 
-  margin-top: 18%;
+  margin-top: 14%;
   margin-bottom: 0;
   padding-bottom: 0;
   width: 100%;
@@ -819,12 +821,13 @@ footer > nav{
 }
 footer > nav > ul{
   font-weight: 400;
-  font-size: 1.3rem;
-  line-height: 2.4rem;
+  font-size: 1.8rem;
+  line-height: 3rem;
 }
 footer > nav > ul > li > a{
   color:#333333;
   text-decoration: none;
+  text-decoration: underline;
 }
 footer > nav > ul > li > a:hover{
   color:#949494;
@@ -833,201 +836,38 @@ footer > nav > ul > li > a:hover{
 footer > nav > p{
   font-size: 1.1rem;
   text-align: center;
-padding-bottom: 10%;
+padding-bottom: 6%;
 }
 
 
 
-
-/********記事ページ**********************/
-div.mainphoto{
+/*サイドバー*/
+div.right-sidebar{
   width: 100%;
-  height: 40rem;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-div.imgcate{
-    background-image: url(../images/postimg2.jpg);
-}
-div.imgsingle{
-    background-image: url(../images/postimg3.jpg);
 }
 div.postwrapper{
 padding-top: 10rem;
-display: flex;
-}
-div.entry_main{
-  margin-bottom: 6%;
-}
-div.entry > p.state{
-  margin-bottom: 6%;
-}
-/*author関連*/
-div.saboxplugin-wrap{
-  border-top: 1px solid #e7ebed;
-  padding: 5%;
-  margin-top: 20%;
-}
-div.saboxplugin-gravatar{
-  width: 20%;
-}
-div.saboxplugin-gravatar img{
-  width: 100%;
-}
-div.saboxplugin-wrap div.vcard{
-  width: 100%;
+
 }
 
 div.post-contents{
-  width: 60%;
-  margin-right: 8%;
-
-}
-
-div.post-contents a{
-  color:#333333;
-  text-decoration: none;
-}
-div.post-contents a:hover{
-  text-decoration: underline;
-}
-div.post-contents ul.postype li img{
-  width: 100%!important;
-  height: auto!important;
-}
-/*サイドバー*/
-div.right-sidebar{
-  width: 270px;
-}
-div.right-sidebar form{
-  font-weight: 500;
-  color:#333333;
-}
-div.right-sidebar div.sidebar-contents-wrap{
-  margin-top: 15%;
-}
-div.right-sidebar input#searchsubmit{
-  font-size: 0.5rem;
-}
-div.widget_search{
-  margin-bottom: 10%;
-}
-div.right-sidebar li a{
-  color: #333333;
-  text-decoration: none;
-}
-div.right-sidebar li a:hover{
-  text-decoration: underline;
-}
-div.right-sidebar li{
-  line-height: 3rem;
-  padding-left: 1rem;
-  font-weight: 500;
-}
-div.right-sidebar h2.widgettitle{
-  margin-top: 3rem;
-  height: 4rem;
-  line-height: 4rem;
-}
-
-div.widget_tag_cloud h2{
-visibility: hidden;
-}
-div.right-sidebar ul.sidebar-pickup > li{
-  border: 1px solid #e7ebed;
-  margin-bottom: 4%;
-padding-bottom: 2%;
-}
-div.right-sidebar ul.sidebar-pickup > li > div.pickup-thum{
-  width: 96%!important;
-  height: 100px!important;
-  overflow: hidden;
-
-}
-div.right-sidebar ul.sidebar-pickup > li > div.pickup-thum img{
-  width: 100%!important;
-  height: auto!important;
-}
-div.right-sidebar ul.sidebar-pickup > li > div.pickup-content{
-  font-size: 1.2rem;
-  line-height: 1.8rem;
-  font-weight: 200;
-}
-/*カテゴリーページ*/
-ul.category > li{
-  margin-bottom: 15%;
-}
-div.cate-thumbox{
   width: 100%;
+
 }
-div.post-contents h2{
-  font-size: 1.8rem;
-  margin-bottom: 10%;
+/*固定ページ*/
+div.page-contents{
+  width: 90%;
+  margin: 0 auto;
 }
-div.post-contents ul.category li h3{
-  font-size: 1.3rem;
+div.contact-form ul > li{
   margin-bottom: 2%;
+  width:100%!important;
 }
-div.cate-thumbox > a > img{
-  width: 100%;
-  height: auto;
-  opacity: 1;
+div.contact-form ul > li.btm{
+  margin-bottom: 6%;
 }
-div.cate-thumbox > a:hover > img{
-  opacity: 0.6;
+div.contact-form ul > li.contact-posts{
+  width:100%!important;
+  margin-left: 0;
+  padding-left: 0;
 }
-/*ペジネーションーカテゴリーページ*/
-ul#pagination{
-  font-weight: 500;
-  margin-top: 10%;
-}
-#prevli{
-  float: left;
-}
-#nextli{
-  float: right;
-}
-/*ペジネーションシングルページ*/
-ul#pagination > li#prev_next{
-  display: flex;
-}
-
-ul#pagination > li#prev_next > a{
-  display: block;
-  width: 43.5%;
-  border: 1px solid #e7ebed;
-  padding: 2.5%;
-}
-ul#pagination > li#prev_next > a:first-child{
-  margin-right: 3%;
-}
-ul#pagination > li#prev_next > a > div#next_title{
-  float: right;
-}
-ul#pagination > li#prev_next > a.clearfix > div{
-    margin-bottom: 5%;
-}
-ul#pagination > li#prev_next li.pagi-thumbox{
-  width: 40%!important;
-  height: 40%!important;
-  overflow: hidden!important;
-}
-ul#pagination > li#prev_next ul.prevnext li.pagi-thumbox > img{
-  width: 100%!important;
-  height: auto!important;
-}
-ul#pagination > li#prev_next ul.prevnext{
-  display: flex;
-  clear: both;
-}
-ul#pagination > li#prev_next ul.prevnext > li{
-  font-weight: 200;
-  font-size: 1.3rem;
-  overflow: hidden;
-}
-
-ul#pagination > li#prev_next ul.prevnext > li.pagi-title{
-  padding: 3%;
-}
-
-/*}*/

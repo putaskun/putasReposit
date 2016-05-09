@@ -791,7 +791,7 @@ div.news ul.sns li.bgYellow > a > p > img{
   width: 100%;
 }
 
-div.news div#pageplugin{
+div#pageplugin{
   position: absolute;
   top:0;
   left:0;
@@ -799,7 +799,7 @@ div.news div#pageplugin{
   height: 100%!important;
   overflow: hidden;
 }
-div.news div#pageplugin > div.fb-page{
+div#pageplugin > div.fb-page{
     width:100% !important;
     height: auto;
 }
@@ -843,6 +843,7 @@ padding-bottom: 10%;
 /*サイドバー*/
 div.right-sidebar{
   width: 100%;
+  background-color: red;
 }
 div.postwrapper{
 padding-top: 10rem;
@@ -869,4 +870,8 @@ div.contact-form ul > li.contact-posts{
   width:100%!important;
   margin-left: 0;
   padding-left: 0;
+}
+
+div.page-contents textarea{
+  border: 1px solid #eee;
 }

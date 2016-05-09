@@ -160,6 +160,9 @@ i.fa-star{
 
 
 /*固定ページ-contact-form*/
+div.page-contents{
+  padding-bottom: 15%;
+}
 div.contact-form{
 width: 100%;
 }
@@ -189,6 +192,7 @@ div.page-contents > h1.page-title{
   line-height:3rem;
   margin-bottom: 5%;
 }
+
 /*固定ページ（お問い合わせ）入力間違い時のcss*/
 div.screen-reader-response{
   display: none;
@@ -307,6 +311,13 @@ div.right-sidebar ul.sidebar-pickup > li > div.pickup-content{
   line-height: 1.8rem;
   font-weight: 200;
 }
+div.right-sidebar div.sidebar-FBwrap{
+  width: 100%;
+  padding-top: 58%;
+  position: relative;
+  overflow: hidden;
+}
+
 /*カテゴリーページ*/
 ul.category > li{
   margin-bottom: 15%;

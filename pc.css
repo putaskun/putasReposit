@@ -787,6 +787,7 @@ div.news .thumbox > a:hover > img{
 opacity: 0.6;
 }
 div.news ul.sns li{
+  position: relative;
   width: 270px;
   height: 130px;
 }
@@ -825,12 +826,15 @@ div.news ul.sns li.bgYellow > a > p > img{
   width: 100%;
 }
 
-div.news div#pageplugin{
-  width: 270px!important;
-  height: 130px;
+div#pageplugin{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%!important;
+  height: 100%!important;
   overflow: hidden;
 }
-div.news div#pageplugin > div.fb-page{
+div#pageplugin > div.fb-page{
     width:100% !important;
     height: auto;
 }

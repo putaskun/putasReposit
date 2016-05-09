@@ -75,6 +75,8 @@
 	<!--/JS固定Footer　Menu 開閉-->
 
 
+
+
 	<div class='loadingWrap'>
 		<p><img src='<?php echo get_template_directory_uri(); ?>/images/toplogo.png'></p>
 	</div>
@@ -94,11 +96,11 @@
 	        </p>
 	        <nav role='navigation'>
 	            <ul>
-	              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#uchabout">グローバルチアについて</a></li>
-	              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#classu">クラス紹介</a></li>
-	              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#coach">コーチ</a></li>
+	              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>/#uchabout">グローバルチアについて</a></li>
+	              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>/#classu">クラス紹介</a></li>
+	              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>/#coach">コーチ</a></li>
 	              <li><a href="">料金</a></li>
-	              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#voice">お客様の声</a></li>
+	              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>/#voice">お客様の声</a></li>
 	              <li><a href="http://dp18311054.lolipop.jp/wordpress/otoiawase/"><i class="fa fa-envelope"></i><span>お問い合わせ</span></a></li>
 	              <li><a href=""><i class="fa fa-phone"></i>045-909-0081</a></li>
 							</ul>
@@ -112,11 +114,11 @@
 		<nav>
 			<ul class="clearfix">
 				<li class="menuTitle"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/toplogo.png" alt="starssmileytitleロゴ"></a></li>
-				<li class="menuAbout"><a href="<?php echo esc_url( home_url( '/' ) ); ?>#uchabout">グローバルチアについて</a></li>
-				<li class="menuClass"><a href="<?php echo esc_url( home_url( '/' ) ); ?>#classu">クラス紹介</a></li>
-				<li class="menuCoach"><a href="<?php echo esc_url( home_url( '/' ) ); ?>#coach">コーチ</a></li>
+				<li class="menuAbout"><a href="<?php echo esc_url( home_url( '/' ) ); ?>/#uchabout">グローバルチアについて</a></li>
+				<li class="menuClass"><a href="<?php echo esc_url( home_url( '/' ) ); ?>/#classu">クラス紹介</a></li>
+				<li class="menuCoach"><a href="<?php echo esc_url( home_url( '/' ) ); ?>/#coach">コーチ</a></li>
 				<li class="menuFee"><a href="">料金</a></li>
-				<li class="menuVoice"><a href="<?php echo esc_url( home_url( '/' ) ); ?>#voice">お客様の声</a></li>
+				<li class="menuVoice"><a href="<?php echo esc_url( home_url( '/' ) ); ?>/#voice">お客様の声</a></li>
 				<li class="otoiawase"><a href="http://dp18311054.lolipop.jp/wordpress/otoiawase/"><i class="fa fa-envelope"></i><span>お問い合わせ</span></a></li>
 				<li class="otoiawase telban"><a href=""><i class="fa fa-phone"></i>045-909-0081</a></li>
 			</ul>
